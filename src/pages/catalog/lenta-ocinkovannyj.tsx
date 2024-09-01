@@ -62,7 +62,7 @@ const Tape = () => {
                                             <td className="p-5">
                                                 <div className="flex items-center">
                                                     <img src={productImagePath} width="48" alt="" />
-                                                    <span>Лист оцинкованный 0.5 мм</span>
+                                                    <span>Лента (штрипс) оцинкованная 0.5 мм</span>
                                                 </div>
                                             </td>
                                             <td>Ст3сп</td>
@@ -75,7 +75,7 @@ const Tape = () => {
                                             <td className="p-5">
                                                 <div className="flex items-center">
                                                     <img src={productImagePath} width="48" alt="" />
-                                                    <span>Лист оцинкованный 0.7 мм</span>
+                                                    <span>Лента (штрипс) оцинкованная 0.7 мм</span>
                                                 </div>
                                             </td>
                                             <td>Ст3сп</td>
@@ -88,7 +88,7 @@ const Tape = () => {
                                             <td className="p-5">
                                                 <div className="flex items-center">
                                                     <img src={productImagePath} width="48" alt="" />
-                                                    <span>Лист оцинкованный 0.8 мм</span>
+                                                    <span>Лента (штрипс) оцинкованная 0.8 мм</span>
                                                 </div>
                                             </td>
                                             <td>Ст3сп</td>
@@ -101,7 +101,7 @@ const Tape = () => {
                                             <td className="p-5">
                                                 <div className="flex items-center">
                                                     <img src={productImagePath} width="48" alt="" />
-                                                    <span>Лист оцинкованный 0.9 мм</span>
+                                                    <span>Лента (штрипс) оцинкованная 0.9 мм</span>
                                                 </div>
                                             </td>
                                             <td>Ст3сп</td>
@@ -114,7 +114,7 @@ const Tape = () => {
                                             <td className="p-5">
                                                 <div className="flex items-center">
                                                     <img src={productImagePath} width="48" alt="" />
-                                                    <span>Лист оцинкованный 1.0 мм</span>
+                                                    <span>Лента (штрипс) оцинкованная 1.0 мм</span>
                                                 </div>
                                             </td>
                                             <td>Ст3сп</td>
@@ -127,7 +127,7 @@ const Tape = () => {
                                             <td className="p-5">
                                                 <div className="flex items-center">
                                                     <img src={productImagePath} width="48" alt="" />
-                                                    <span>Лист оцинкованный 1.5 мм</span>
+                                                    <span>Лента (штрипс) оцинкованная 1.5 мм</span>
                                                 </div>
                                             </td>
                                             <td>Ст3сп</td>
@@ -140,7 +140,7 @@ const Tape = () => {
                                             <td className="p-5">
                                                 <div className="flex items-center">
                                                     <img src={productImagePath} width="48" alt="" />
-                                                    <span>Лист оцинкованный 2.0 мм</span>
+                                                    <span>Лента (штрипс) оцинкованная 2.0 мм</span>
                                                 </div>
                                             </td>
                                             <td>Ст3сп</td>
@@ -153,7 +153,7 @@ const Tape = () => {
                                             <td className="p-5">
                                                 <div className="flex items-center">
                                                     <img src={productImagePath} width="48" alt="" />
-                                                    <span>Лист оцинкованный 3.0 мм</span>
+                                                    <span>Лента (штрипс) оцинкованная 3.0 мм</span>
                                                 </div>
                                             </td>
                                             <td>Ст3сп</td>

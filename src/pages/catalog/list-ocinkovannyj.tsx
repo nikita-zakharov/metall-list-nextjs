@@ -1,7 +1,12 @@
 import Link from "next/link"
 import BaseLayout from "../components/BaseLayout"
+import ImageZoom from "../components/ImageZoom";
 
 const productImagePath = '/images/list-ocink-small.png'
+
+const ImageZoomWrapper = ({ src, alt }: { src: string; alt: string }) => {
+    return <ImageZoom src={src} alt={alt} className="w-full h-full" options={{ background: '#000000df', scrollOffset: 0 }} />
+}
 
 const Sheet = () => {
     return (
@@ -16,7 +21,7 @@ const Sheet = () => {
                     <p className="mb-16">
                         <span className="text-orange-400">Главная</span> / <span className="text-orange-400">Каталог</span> / Лист оцинкованный
                     </p>
-                    <div className="grid grid-cols-12 gap-24">
+                    <div className="grid grid-cols-12 gap-24 mb-16">
                         <div className="col-span-3">
                             <p className="font-bold text-xl">Каталог</p>
                             <hr className="my-4" />
@@ -166,6 +171,23 @@ const Sheet = () => {
                                 </table>
                             </div>
                         </div>
+                    </div>
+                    <div>
+                        <h2 className="font-bold text-2xl mb-8">Фото продукции</h2>
+                        <ul className="grid grid-cols-4 gap-4">
+                            <li>
+                                <ImageZoomWrapper src="/images/listy-ocinkovannyj-1.jpeg" alt="Листы оцинкованные №1" />
+                            </li>
+                            <li>
+                                <ImageZoomWrapper src="/images/listy-ocinkovannyj-2.jpeg" alt="Листы оцинкованные №2" />
+                            </li>
+                            <li>
+                                <ImageZoomWrapper src="/images/listy-ocinkovannyj-3.jpeg" alt="Листы оцинкованные №3" />
+                            </li>
+                            <li>
+                                <ImageZoomWrapper src="/images/listy-ocinkovannyj-4.jpeg" alt="Листы оцинкованные №4" />
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </>

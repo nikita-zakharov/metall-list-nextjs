@@ -23,7 +23,7 @@ const HeroSection = () => {
                     <div className="flex items center">
                         <Link href={LinkUrl.CatalogSheet}>
                             <button
-                                className="py-3 px-8 bg-orange-500 hover:scale-105 transition-transform rounded-full text-white font-medium mr-8"
+                                className="py-3 px-8 bg-orange-400 hover:scale-105 transition-transform rounded-full text-white font-medium mr-8"
                             >
                                 Перейти в каталог
                             </button>

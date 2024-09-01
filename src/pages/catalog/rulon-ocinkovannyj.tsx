@@ -1,7 +1,12 @@
 import Link from "next/link"
 import BaseLayout from "../components/BaseLayout"
+import ImageZoom from "../components/ImageZoom";
 
 const productImagePath = '/images/rulon-small.png'
+
+const ImageZoomWrapper = ({ src, alt }: { src: string; alt: string }) => {
+    return <ImageZoom src={src} alt={alt} className="w-full h-full" options={{ background: '#000000df', scrollOffset: 0 }} />
+}
 
 const Roll = () => {
     return (
@@ -9,14 +14,14 @@ const Roll = () => {
             <>
                 <div style={{ background: 'url("/images/rulon-banner.png")', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }} className="relative w-full py-16">
                     <div className="container">
-                        <h1 className="text-white text-4xl">Лист оцинкованный</h1>
+                        <h1 className="text-white text-4xl">Рулон оцинкованный</h1>
                     </div>
                 </div>
                 <div className="container pt-6 pb-24">
                     <p className="mb-16">
-                        <span className="text-orange-400">Главная</span> / <span className="text-orange-400">Каталог</span> / Лист оцинкованный
+                        <span className="text-orange-400">Главная</span> / <span className="text-orange-400">Каталог</span> / Рулон оцинкованный
                     </p>
-                    <div className="grid grid-cols-12 gap-24">
+                    <div className="grid grid-cols-12 gap-24 mb-16">
                         <div className="col-span-3">
                             <p className="font-bold text-xl">Каталог</p>
                             <hr className="my-4" />
@@ -62,7 +67,7 @@ const Roll = () => {
                                             <td className="p-5">
                                                 <div className="flex items-center">
                                                     <img src={productImagePath} width="48" alt="" />
-                                                    <span>Лист оцинкованный 0.5 мм</span>
+                                                    <span>Рулон оцинкованный 0.5 мм</span>
                                                 </div>
                                             </td>
                                             <td>Ст3сп</td>
@@ -75,7 +80,7 @@ const Roll = () => {
                                             <td className="p-5">
                                                 <div className="flex items-center">
                                                     <img src={productImagePath} width="48" alt="" />
-                                                    <span>Лист оцинкованный 0.7 мм</span>
+                                                    <span>Рулон оцинкованный 0.7 мм</span>
                                                 </div>
                                             </td>
                                             <td>Ст3сп</td>
@@ -88,7 +93,7 @@ const Roll = () => {
                                             <td className="p-5">
                                                 <div className="flex items-center">
                                                     <img src={productImagePath} width="48" alt="" />
-                                                    <span>Лист оцинкованный 0.8 мм</span>
+                                                    <span>Рулон оцинкованный 0.8 мм</span>
                                                 </div>
                                             </td>
                                             <td>Ст3сп</td>
@@ -101,7 +106,7 @@ const Roll = () => {
                                             <td className="p-5">
                                                 <div className="flex items-center">
                                                     <img src={productImagePath} width="48" alt="" />
-                                                    <span>Лист оцинкованный 0.9 мм</span>
+                                                    <span>Рулон оцинкованный 0.9 мм</span>
                                                 </div>
                                             </td>
                                             <td>Ст3сп</td>
@@ -114,7 +119,7 @@ const Roll = () => {
                                             <td className="p-5">
                                                 <div className="flex items-center">
                                                     <img src={productImagePath} width="48" alt="" />
-                                                    <span>Лист оцинкованный 1.0 мм</span>
+                                                    <span>Рулон оцинкованный 1.0 мм</span>
                                                 </div>
                                             </td>
                                             <td>Ст3сп</td>
@@ -127,7 +132,7 @@ const Roll = () => {
                                             <td className="p-5">
                                                 <div className="flex items-center">
                                                     <img src={productImagePath} width="48" alt="" />
-                                                    <span>Лист оцинкованный 1.5 мм</span>
+                                                    <span>Рулон оцинкованный 1.5 мм</span>
                                                 </div>
                                             </td>
                                             <td>Ст3сп</td>
@@ -140,7 +145,7 @@ const Roll = () => {
                                             <td className="p-5">
                                                 <div className="flex items-center">
                                                     <img src={productImagePath} width="48" alt="" />
-                                                    <span>Лист оцинкованный 2.0 мм</span>
+                                                    <span>Рулон оцинкованный 2.0 мм</span>
                                                 </div>
                                             </td>
                                             <td>Ст3сп</td>
@@ -153,7 +158,7 @@ const Roll = () => {
                                             <td className="p-5">
                                                 <div className="flex items-center">
                                                     <img src={productImagePath} width="48" alt="" />
-                                                    <span>Лист оцинкованный 3.0 мм</span>
+                                                    <span>Рулон оцинкованный 3.0 мм</span>
                                                 </div>
                                             </td>
                                             <td>Ст3сп</td>
@@ -166,6 +171,15 @@ const Roll = () => {
                                 </table>
                             </div>
                         </div>
+                    </div>
+                    <div>
+                        <h2 className="font-bold text-2xl mb-8">Фото продукции</h2>
+                        <ul className="grid grid-cols-4 gap-4">
+                            <li>
+                                <ImageZoomWrapper src="/images/rulon-ocinkovannyj-1.jpeg" alt="Рулон оцинкованный №1" />
+                            </li>
+
+                        </ul>
                     </div>
                 </div>
             </>
