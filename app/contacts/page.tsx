@@ -1,4 +1,5 @@
 import Banner from "../components/shared/Banner";
+import YandexMap from "../components/shared/YandexMap";
 
 export default function ContactsPage() {
     return (<div>
@@ -7,15 +8,7 @@ export default function ContactsPage() {
             <div className="container py-20">
                 <div className="grid grid-cols-12 gap-8">
                     <div className="col-span-8">
-                        <div className="relative overflow-hidden">
-                            <iframe src="https://yandex.ru/map-widget/v1/?ll=39.282288%2C51.652999&mode=search&oid=1381466419&ol=biz&z=14.28"
-                                width="100%"
-                                height="560"
-                                frameBorder="1"
-                                allowFullScreen
-                                className="relative">
-                            </iframe>
-                        </div>
+                        <YandexMap />
                     </div>
                     <div className="w-[280px] leading-7">
                         <div className="mb-4">
