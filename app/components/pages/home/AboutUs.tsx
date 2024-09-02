@@ -7,7 +7,7 @@ const AboutUs = () => {
         <section className="py-16 bg-gray-100">
             <div className="container">
                 <SectionHeading title="О компании" description="Немного о компании в цифрах" />
-                <div className="grid grid-cols-2 gap-24">
+                <div className="grid xl:grid-cols-2 gap-24">
                     <div className="leading-5">
                         <p className="mb-4">
                             Компания «Металл-лист» основана в декабре 2012 года.

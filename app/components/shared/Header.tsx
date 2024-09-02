@@ -7,7 +7,7 @@ import PhoneLink from "./PhoneLink";
 import Button from "./Button";
 
 export default function Header() {
-    return (<header>
+    return (<header className="xl:block hidden">
         <div className="bg-stone-100">
             <div className="container">
                 <ul className="flex items-center py-2 justify-end">

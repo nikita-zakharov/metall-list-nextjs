@@ -6,11 +6,11 @@ export default function ContactsPage() {
         <div>
             <Banner title="Контакты" imageSrc="/images/lenta-banner.png" />
             <div className="container py-20">
-                <div className="grid grid-cols-12 gap-8">
+                <div className="grid xl:grid-cols-12 gap-8">
                     <div className="col-span-8">
                         <YandexMap />
                     </div>
-                    <div className="w-[280px] leading-7">
+                    <div className="col-span-4 order-first xl:order-none  leading-7">
                         <div className="mb-4">
                             <div>
                                 <p>

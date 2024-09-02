@@ -11,7 +11,7 @@ export default function CatalogSheetPage() {
     </div>
         <div className="container py-20">
 
-            <div className="grid grid-cols-12 gap-24 mb-16">
+            <div className="grid xl:grid-cols-12 gap-24 mb-16">
                 <div className="col-span-3">
                     <CatalogNavigation />
                 </div>
@@ -140,7 +140,7 @@ export default function CatalogSheetPage() {
             </div>
             <div>
                 <h2 className="font-bold text-2xl mb-8">Фото продукции</h2>
-                <ul className="grid grid-cols-4 gap-4">
+                <ul className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
                     <li>
                         <img src="/images/listy-ocinkovannyj-1.jpeg" alt="Листы оцинкованные №1" />
                     </li>
