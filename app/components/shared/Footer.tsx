@@ -2,6 +2,7 @@ import Link from "next/link";
 import PhoneLink from "./PhoneLink";
 import EmailLink from "./EmailLink";
 import { address } from "@/app/constants";
+import { LinkUrl } from "@/app/types";
 
 export default function Footer() {
     return (<footer className="bg-neutral-800 text-gray-200 py-8">
@@ -14,9 +15,9 @@ export default function Footer() {
                 <div className="col-span-4">
                     <p className="text-neutral-400 text-xl mb-3">Каталог</p>
                     <ul>
-                        <li>Листы оцинкованные</li>
-                        <li>Рулоны оцинкованные</li>
-                        <li>Штрипс(лента) оцинкованная</li>
+                        <li><Link href={LinkUrl.CatalogSheet}>Листы оцинкованные</Link></li>
+                        <li><Link href={LinkUrl.CatalogRoll}>Рулоны оцинкованные</Link></li>
+                        <li><Link href={LinkUrl.CatalogTape}>Штрипс(лента) оцинкованная</Link></li>
                     </ul>
                 </div>
                 <div className="col-span-3 lg:justify-self-end">
@@ -30,9 +31,8 @@ export default function Footer() {
             </div>
             <hr className="my-8 border-t-neutral-500" />
             <div className="lg:grid grid-cols-12 text-neutral-400">
-                <div className="col-span-5"><p className="text-sm">© 2012-2024 «Металл лист». Все права защищены.</p></div>
-                <div className="col-span-4"><Link href="/policy" className="text-sm underline">Политика обработки персональных данных</Link></div>
-                <div className="col-span-3 justify-self-end"><Link href="/policy" className="text-sm underline">Политика конфиденциальности</Link></div>
+                <div className="col-span-6"><p className="text-sm">© 2012-2024 «Металл лист». Все права защищены.</p></div>
+                <div className="col-span-6 justify-self-end"><Link href="/policy" className="text-sm underline">Политика конфиденциальности</Link></div>
             </div>
         </div>
     </footer>)
