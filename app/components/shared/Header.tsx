@@ -1,7 +1,7 @@
 'use client'
 import Link from "next/link";
 import { LinkUrl } from "../../types";
-import { BsClock, BsGeoAlt, BsEnvelope, BsTelephone, BsXLg, BsList } from "react-icons/bs";
+import { BsClock, BsGeoAlt, BsEnvelope, BsTelephone, BsXLg, BsList, BsChevronRight } from "react-icons/bs";
 import { address, openingHours } from "@/app/constants";
 import EmailLink from "./EmailLink";
 import PhoneLink from "./PhoneLink";
@@ -61,19 +61,66 @@ export default function Header() {
             </div>
         </div>
         <div className="bg-white p-4">
-            <div className="flex justify-end">
+            <div className="flex justify-between">
+                <p>Металл-лист</p>
                 <button onClick={() => setOpen(true)} className="text-3xl"><BsList /></button>
             </div>
-            {open && <div className="bg-white fixed top-0 left-0 z-20 w-full h-full">
-                <div className="flex justify-end">
-                    <button onClick={() => setOpen(false)} className="p-4 text-4xl" ><BsXLg /></button>
+            {open && <div className="bg-gray-100 fixed top-0 left-0 z-20 w-full h-full">
+                <div className="flex flex-col justify-between h-full">
+                    <div>
+                        <div className="flex justify-end">
+                            <button onClick={() => setOpen(false)} className="p-4 text-4xl">
+                                <BsXLg />
+                            </button>
+                        </div>
+                        <nav className="mt-8 flex flex-col list-none gap-1">
+                            <li className="flex justify-between items-center border-b p-4">
+                                <Link className="w-full" href={LinkUrl.Home}>Главная</Link>
+                                <BsChevronRight className="text-xl text-gray-400" />
+                            </li>
+                            <li className="flex justify-between items-center border-b p-4">
+                                <Link className="w-full" href={LinkUrl.CatalogSheet}>Каталог</Link>
+                                <BsChevronRight className="text-xl text-gray-400" />
+                            </li>
+                            <li className="flex justify-between items-center border-b p-4">
+                                <Link className="w-full" href={LinkUrl.PaymentAndDelivery}>Оплата и доставка</Link>
+                                <BsChevronRight className="text-xl text-gray-400" />
+                            </li>
+                            <li className="flex justify-between items-center border-b  p-4">
+                                <Link className="w-full" href={LinkUrl.Contacts}>Контакты</Link>
+                                <BsChevronRight className="text-xl text-gray-400" />
+                            </li>
+                        </nav>
+                    </div>
+                    <div>
+                        <ul>
+                            <li className="flex items-center gap-2 p-4">
+                                <span className="text-orange-400"><BsTelephone /></span>
+                                <span className="font-bold text-lg">
+                                    <PhoneLink />
+                                </span>
+                            </li>
+                            <li className="flex items-center gap-2 p-4">
+                                <span className="text-orange-400"><BsEnvelope /></span>
+                                <span>
+                                    <EmailLink />
+                                </span>
+                            </li>
+                            <li className="flex items-center gap-2 p-4">
+                                <span className="text-orange-400"><BsClock /></span>
+                                <span>
+                                    {openingHours}
+                                </span>
+                            </li>
+                            <li className="flex items-center gap-2 p-4">
+                                <span className="text-orange-400"><BsGeoAlt /></span>
+                                <span>
+                                    {address}
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <nav className="p-4 flex flex-col list-none gap-8 ">
-                    <li><Link className="w-full px-4 py-2" href={LinkUrl.Home}>Главная</Link></li>
-                    <li><Link className="w-full px-4 py-2" href={LinkUrl.CatalogSheet}>Каталог</Link></li>
-                    <li><Link className="w-full px-4 py-2" href={LinkUrl.PaymentAndDelivery}>Оплата и доставка</Link></li>
-                    <li><Link className="w-full px-4 py-2" href={LinkUrl.Contacts}>Контакты</Link></li>
-                </nav>
             </div>}
         </div>
     </header>)
