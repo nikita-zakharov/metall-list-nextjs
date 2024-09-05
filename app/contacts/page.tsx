@@ -7,7 +7,7 @@ import { openingHours } from "../constants";
 export default function ContactsPage() {
     return (<div>
         <div>
-            <Banner title="Контакты" imageSrc="/images/lenta-banner.png" />
+            <Banner title="Контакты" imageSrc="/images/banner-lenta.png" />
             <div className="container py-20">
                 <div className="grid xl:grid-cols-12 gap-8">
                     <div className="col-span-8">

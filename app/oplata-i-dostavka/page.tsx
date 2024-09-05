@@ -7,7 +7,7 @@ export default function PaymentAndDeliveryPage() {
             <div className="container py-16">
                 <div className="mb-8">
                     <h3 className="font-bold text-2xl mb-4">Процесс оформления заявки</h3>
-                    <ul className="list-decimal pl-4 leading-7 marker:text-orange-400 marker:font-bold">
+                    <ul className="list-decimal pl-4 leading-8 marker:text-orange-400 marker:font-bold">
                         <li>
                             <p className="font-bold">Оформление заявки</p>
                             <p>Вы можете отправить заявку через наш сайт или позвонить нам по телефону.</p>
@@ -36,7 +36,7 @@ export default function PaymentAndDeliveryPage() {
                 </div>
                 <div>
                     <h3 className="font-bold text-2xl mb-4">Варианты доставки</h3>
-                    <ul className="leading-7 list-disc pl-4 marker:text-orange-400">
+                    <ul className="leading-8 list-disc pl-4 marker:text-orange-400">
                         <li>
                             <p><span className="font-bold">Самовывоз</span> — забрать товар можно самостоятельно с нашего склада по адресу:
                                 <span className="underline">г. Воронеж, ул. Базовая, 4</span>

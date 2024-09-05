@@ -59,7 +59,7 @@ export default function CatalogRollPage() {
             </div>
             <div>
                 <h2 className="font-bold text-2xl mb-8">Фото продукции</h2>
-                <ul className="grid grid-cols-4 gap-4">
+                <ul className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
                     {[rulonOcinkPic1, rulonOcinkPic2].map((image, index) => (
                         <li key={index}>
                             <Image className="w-full h-full" src={image} alt={`Фото продукции - Рулон оцинкованный ${index + 1}`} />
