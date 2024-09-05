@@ -6,16 +6,18 @@ import listyOcinkPic2 from '@/public/images/listy-ocinkovannyj-2.jpeg'
 import listyOcinkPic3 from '@/public/images/listy-ocinkovannyj-3.jpeg'
 import listyOcinkPic4 from '@/public/images/listy-ocinkovannyj-4.jpeg'
 import { nlmkSiteUrl } from "@/app/constants";
+import Lightbox from "@/app/components/modals/Lightbox/Lightbox";
 
 const productImagePath = '/images/list-ocink-small.png'
 const thinkness = [0.5, 0.7, 0.8, 0.9, 1.0, 1.2, 1.5, 2.0, 2.5, 3.0]
 
 export default function CatalogSheetPage() {
-    return (<div><div style={{ background: 'url("/images/banner-list-ocinkovannyj.png")', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }} className="relative w-full py-16">
-        <div className="container">
-            <h1 className="text-white text-4xl">Лист оцинкованный</h1>
+    return (<div>
+        <div style={{ background: 'url("/images/banner-list-ocinkovannyj.png")', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }} className="relative w-full py-16">
+            <div className="container">
+                <h1 className="text-white text-4xl">Лист оцинкованный</h1>
+            </div>
         </div>
-    </div>
         <div className="container py-20">
             <div className="mb-16">
                 <CatalogNavigation />
@@ -64,10 +66,11 @@ export default function CatalogSheetPage() {
                 <ul className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
                     {[listyOcinkPic1, listyOcinkPic2, listyOcinkPic3, listyOcinkPic4].map((image, index) => (
                         <li key={index}>
-                            <Image className="w-full h-full" src={image} alt={`Фото продукции - Листы оцинкованные ${index + 1}`} />
+                            <Lightbox image={<Image className="w-full h-full" src={image} alt={`Фото продукции - Листы оцинкованные ${index + 1}`} />} />
                         </li>
                     ))}
                 </ul>
             </div>
-        </div></div>)
+        </div>
+    </div>)
 }
