@@ -20,7 +20,7 @@ export default function CatalogTapePage() {
             <div className="mb-16">
                 <div>
                     <div>
-                        <table className="w-full">
+                        <table className="w-full block lg:table overflow-x-auto">
                             <thead>
                                 <tr className="border-b bg-neutral-100">
                                     <th className="p-5">Наименование</th>

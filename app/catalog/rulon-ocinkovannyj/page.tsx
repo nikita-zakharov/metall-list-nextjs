@@ -4,6 +4,7 @@ import rulonOcinkPic1 from '@/public/images/rulon-ocinkovannyj-1.jpeg'
 import rulonOcinkPic2 from '@/public/images/rulon-ocinkovannyj-2.jpeg'
 import { nlmkSiteUrl } from "@/app/constants";
 import Image from "next/image";
+import LightGalleryWrapper from "@/app/components/shared/LightGalleryWrapper";
 
 const productImagePath = '/images/rulon-small.png'
 const thinkness = [0.5, 0.7, 0.8, 0.9, 1.0, 1.2, 1.5, 2.0, 2.5, 3.0]
@@ -21,7 +22,7 @@ export default function CatalogRollPage() {
             <div className="mb-16">
                 <div>
                     <div>
-                        <table className="w-full">
+                        <table className="w-full block lg:table overflow-x-auto">
                             <thead>
                                 <tr className="border-b bg-neutral-100">
                                     <th className="p-5">Наименование</th>
@@ -59,13 +60,13 @@ export default function CatalogRollPage() {
             </div>
             <div>
                 <h2 className="font-bold text-2xl mb-8">Фото продукции</h2>
-                <ul className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <LightGalleryWrapper
+                    elementClassNames="grid grid-cols-1 lg:grid-cols-4 gap-4 cursor-pointer"
+                >
                     {[rulonOcinkPic1, rulonOcinkPic2].map((image, index) => (
-                        <li key={index}>
-                            <Image className="w-full h-full" src={image} alt={`Фото продукции - Рулон оцинкованный ${index + 1}`} />
-                        </li>
+                        <Image className="w-full h-full" src={image} alt={`Фото продукции - Рулон оцинкованный ${index + 1}`} />
                     ))}
-                </ul>
+                </LightGalleryWrapper>
             </div>
         </div></div>)
 }

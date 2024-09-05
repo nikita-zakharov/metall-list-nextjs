@@ -1,4 +1,3 @@
-'use client'
 import CatalogNavigation from "../CatalogNavigation";
 import Image from "next/image";
 import nlmkLogoPic from '@/public/images/NLMK-logo.png'
@@ -7,13 +6,11 @@ import listyOcinkPic2 from '@/public/images/listy-ocinkovannyj-2.jpeg'
 import listyOcinkPic3 from '@/public/images/listy-ocinkovannyj-3.jpeg'
 import listyOcinkPic4 from '@/public/images/listy-ocinkovannyj-4.jpeg'
 import listyOcinkSmall from '@/public/images/list-ocink-small.png'
-import LightGallery from 'lightgallery/react';
 import { nlmkSiteUrl } from "@/app/constants";
-
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from "swiper/modules";
+import LightGalleryWrapper from "@/app/components/shared/LightGalleryWrapper";
 
 const thinkness = [0.5, 0.7, 0.8, 0.9, 1.0, 1.2, 1.5, 2.0, 2.5, 3.0]
+const gallery = [listyOcinkPic1, listyOcinkPic2, listyOcinkPic3, listyOcinkPic4]
 
 export default function CatalogSheetPage() {
     return (<div>
@@ -29,7 +26,7 @@ export default function CatalogSheetPage() {
             <div className="mb-16">
                 <div>
                     <div>
-                        <table className="w-full">
+                        <table className="w-full block lg:table overflow-x-auto">
                             <thead>
                                 <tr className="border-b bg-neutral-100">
                                     <th className="p-5">Наименование</th>
@@ -67,28 +64,15 @@ export default function CatalogSheetPage() {
             </div>
             <div>
                 <h2 className="font-bold text-2xl mb-8">Фото продукции</h2>
-                <Swiper
-                    spaceBetween={20}
-                    slidesPerView={1}
-                    breakpoints={{ 768: { slidesPerView: 4 } }}
-                    onSlideChange={() => console.log('slide change')}
-                    navigation
-                    modules={[Navigation]}
-                    onSwiper={(swiper) => console.log(swiper)}
-                >
-                    {[listyOcinkPic1, listyOcinkPic2, listyOcinkPic3, listyOcinkPic4].map((image, index) => (
-                        <li key={index}>
-                            <SwiperSlide>
-                                <LightGallery
-                                    download={false}
-                                    speed={500}
-                                >
-                                    <Image className="w-full h-full cursor-pointer" src={image} alt='asd1' />
-                                </LightGallery></SwiperSlide>
-                        </li>
-
-                    ))}
-                </Swiper>
+                <nav>
+                    <LightGalleryWrapper
+                        elementClassNames="grid grid-cols-1 lg:grid-cols-4 gap-4 cursor-pointer"
+                    >
+                        {gallery.map((image, index) => (
+                            <Image className="h-full" src={image} key={index} alt={`Фото продукции - Лист оцинкованный №${index + 1}`} />
+                        ))}
+                    </LightGalleryWrapper>
+                </nav>
             </div>
         </div>
     </div>)
