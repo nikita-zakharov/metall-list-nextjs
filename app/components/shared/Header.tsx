@@ -18,7 +18,7 @@ export default function Header() {
     }, [pathname])
 
     return (<header className=" shadow bg-white">
-        <div className="xl:block hidden">
+        <div className="lg:block hidden">
             <div className="bg-stone-100">
                 <div className="container">
                     <ul className="flex items-center py-2 justify-end">
@@ -60,7 +60,7 @@ export default function Header() {
                 </div>
             </div>
         </div>
-        <div className="bg-white p-4">
+        <div className="lg:hidden bg-white p-4">
             <div className="flex justify-between">
                 <p>Металл-лист</p>
                 <button onClick={() => setOpen(true)} className="text-3xl"><BsList /></button>

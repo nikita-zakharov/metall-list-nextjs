@@ -1,138 +1,56 @@
-import Link from "next/link";
 import CatalogNavigation from "../CatalogNavigation";
+import nlmkLogoPic from '@/public/images/NLMK-logo.png'
+import { nlmkSiteUrl } from "@/app/constants";
+import Image from "next/image";
 
 const productImagePath = '/images/lenta-shtrips-small.png'
+const thinkness = [0.5, 0.7, 0.8, 0.9, 1.0, 1.2, 1.5, 2.0, 2.5, 3.0]
 
 export default function CatalogTapePage() {
     return (<div>
-        <div style={{ background: 'url("/images/lenta-banner.png")', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }} className="relative w-full py-16">
+        <div style={{ background: 'url("/images/banner-lenta.png")', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }} className="relative w-full py-16">
             <div className="container">
                 <h1 className="text-white text-4xl">Лист оцинкованный</h1>
             </div>
         </div>
-        <div className="container pt-6 pb-24">
-            <div className="grid grid-cols-12 gap-24">
-                <div className="col-span-3">
-                    <CatalogNavigation />
-                </div>
-                <div className="col-span-9">
+        <div className="container py-20">
+            <div className="mb-16">
+                <CatalogNavigation />
+            </div>
+            <div className="mb-16">
+                <div>
                     <div>
                         <table className="w-full">
                             <thead>
-                                <tr className="text-left border-b bg-neutral-100">
+                                <tr className="border-b bg-neutral-100">
                                     <th className="p-5">Наименование</th>
-                                    <th>Марка</th>
-                                    <th>Толщина</th>
                                     <th>Длина</th>
+                                    <th>Марка</th>
                                     <th>Производитель</th>
+                                    <th>Цена (с НДС)</th>
                                     <th></th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr className="border-b">
-                                    <td className="p-5">
-                                        <div className="flex items-center">
-                                            <img src={productImagePath} width="48" alt="" />
-                                            <span>Лента (штрипс) оцинкованная 0.5 мм</span>
-                                        </div>
-                                    </td>
-                                    <td>Ст3сп</td>
-                                    <td>0.5</td>
-                                    <td>Любая<br /> от 2500 до 5000 мм</td>
-                                    <td>НЛМК</td>
-                                    <td><button className="rounded-full bg-orange-400 px-7 py-2 text-white">Купить</button></td>
-                                </tr>
-                                <tr className="border-b bg-neutral-100">
-                                    <td className="p-5">
-                                        <div className="flex items-center">
-                                            <img src={productImagePath} width="48" alt="" />
-                                            <span>Лента (штрипс) оцинкованная 0.7 мм</span>
-                                        </div>
-                                    </td>
-                                    <td>Ст3сп</td>
-                                    <td>0.7</td>
-                                    <td>Любая<br /> от 2500 до 5000 мм</td>
-                                    <td>НЛМК</td>
-                                    <td><button className="rounded-full bg-orange-400 px-7 py-2 text-white">Купить</button></td>
-                                </tr>
-                                <tr className="border-b">
-                                    <td className="p-5">
-                                        <div className="flex items-center">
-                                            <img src={productImagePath} width="48" alt="" />
-                                            <span>Лента (штрипс) оцинкованная 0.8 мм</span>
-                                        </div>
-                                    </td>
-                                    <td>Ст3сп</td>
-                                    <td>0.8</td>
-                                    <td>Любая<br /> от 2500 до 5000 мм</td>
-                                    <td>НЛМК</td>
-                                    <td><button className="rounded-full bg-orange-400 px-7 py-2 text-white">Купить</button></td>
-                                </tr>
-                                <tr className="border-b bg-neutral-100">
-                                    <td className="p-5">
-                                        <div className="flex items-center">
-                                            <img src={productImagePath} width="48" alt="" />
-                                            <span>Лента (штрипс) оцинкованная 0.9 мм</span>
-                                        </div>
-                                    </td>
-                                    <td>Ст3сп</td>
-                                    <td>0.9</td>
-                                    <td>Любая<br /> от 2500 до 5000 мм</td>
-                                    <td>НЛМК</td>
-                                    <td><button className="rounded-full bg-orange-400 px-7 py-2 text-white">Купить</button></td>
-                                </tr>
-                                <tr className="border-b">
-                                    <td className="p-5">
-                                        <div className="flex items-center">
-                                            <img src={productImagePath} width="48" alt="" />
-                                            <span>Лента (штрипс) оцинкованная 1.0 мм</span>
-                                        </div>
-                                    </td>
-                                    <td>Ст3сп</td>
-                                    <td>1.0</td>
-                                    <td>Любая<br /> от 2500 до 5000 мм</td>
-                                    <td>НЛМК</td>
-                                    <td><button className="rounded-full bg-orange-400 px-7 py-2 text-white">Купить</button></td>
-                                </tr>
-                                <tr className="border-b bg-neutral-100">
-                                    <td className="p-5">
-                                        <div className="flex items-center">
-                                            <img src={productImagePath} width="48" alt="" />
-                                            <span>Лента (штрипс) оцинкованная 1.5 мм</span>
-                                        </div>
-                                    </td>
-                                    <td>Ст3сп</td>
-                                    <td>1.5</td>
-                                    <td>Любая<br /> от 2500 до 5000 мм</td>
-                                    <td>НЛМК</td>
-                                    <td><button className="rounded-full bg-orange-400 px-7 py-2 text-white">Купить</button></td>
-                                </tr>
-                                <tr className="border-b">
-                                    <td className="p-5">
-                                        <div className="flex items-center">
-                                            <img src={productImagePath} width="48" alt="" />
-                                            <span>Лента (штрипс) оцинкованная 2.0 мм</span>
-                                        </div>
-                                    </td>
-                                    <td>Ст3сп</td>
-                                    <td>2.0</td>
-                                    <td>Любая<br /> от 2500 до 5000 мм</td>
-                                    <td>НЛМК</td>
-                                    <td><button className="rounded-full bg-orange-400 px-7 py-2 text-white">Купить</button></td>
-                                </tr>
-                                <tr className="border-b bg-neutral-100">
-                                    <td className="p-5">
-                                        <div className="flex items-center">
-                                            <img src={productImagePath} width="48" alt="" />
-                                            <span>Лента (штрипс) оцинкованная 3.0 мм</span>
-                                        </div>
-                                    </td>
-                                    <td>Ст3сп</td>
-                                    <td>3.0</td>
-                                    <td>Любая<br /> от 2500 до 5000 мм</td>
-                                    <td>НЛМК</td>
-                                    <td><button className="rounded-full bg-orange-400 px-7 py-2 text-white">Купить</button></td>
-                                </tr>
+                                {thinkness.map(item => (
+                                    <tr className="border-b text-center text-sm" key={item}>
+                                        <td className="py-5">
+                                            <div className="flex items-center gap-4 justify-center">
+                                                <img src={productImagePath} width="48" alt="Лента (штрипс) оцинкованная" />
+                                                <span>Лента (штрипс) оцинкованная {Number(item).toFixed(1)} мм</span>
+                                            </div>
+                                        </td>
+                                        <td>Любая<br /> от 2500 до 5000 мм</td>
+                                        <td>02</td>
+                                        <td>
+                                            <a href={nlmkSiteUrl} target="_blank">
+                                                <Image src={nlmkLogoPic} className="mx-auto" width="65" alt="Логотип компании НЛМК" />
+                                            </a>
+                                        </td>
+                                        <td>По запросу</td>
+                                        <td><button className="rounded-full bg-orange-400 px-7 py-2 text-white">Купить</button></td>
+                                    </tr>
+                                ))}
                             </tbody>
                         </table>
                     </div>
