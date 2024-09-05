@@ -17,7 +17,7 @@ const thinkness = [0.5, 0.7, 0.8, 0.9, 1.0, 1.2, 1.5, 2.0, 2.5, 3.0]
 
 export default function CatalogSheetPage() {
     return (<div>
-        <div style={{ background: 'url("/images/banner-list-ocinkovannyj.png")', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }} className="relative w-full py-16">
+        <div style={{ background: 'url("/images/banner-list-ocinkovannyj.webp")', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }} className="relative w-full py-16">
             <div className="container">
                 <h1 className="text-white text-4xl">Лист оцинкованный</h1>
             </div>
