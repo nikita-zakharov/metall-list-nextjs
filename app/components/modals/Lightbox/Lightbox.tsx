@@ -31,13 +31,18 @@ export default function Lightbox({ image }: Props) {
     }, [handleDialogCancel])
 
     return (
-        <div>
+        <div className="h-full">
             <button className="w-full h-full cursor-zoom-in" onClick={open}>
                 {image}
             </button>
             <dialog ref={dialogRef} className=" backdrop:bg-black/80 overflow-y-hidden">
-                <button className="absolute top-4 right-4 p-3 text-xl text-black rounded-full bg-white shadow" onClick={() => close()}><BsXLg /></button>
-                <div className="max-w-[700px] max-h-[700px]">{image}</div>
+
+                <div className="max-w-[700px] max-h-[700px] relative">
+                    <div className="w-full bg-black/70 h-16 absolute top-0">
+                        <button className="absolute top-3 right-4 p-2 text-lg text-black rounded-full bg-white shadow" onClick={() => close()}><BsXLg /></button>
+                    </div>
+                    {image}
+                </div>
             </dialog>
         </div>
     )

@@ -1,3 +1,4 @@
+'use client'
 import CatalogNavigation from "../CatalogNavigation";
 import Image from "next/image";
 import nlmkLogoPic from '@/public/images/NLMK-logo.png'
@@ -5,8 +6,11 @@ import listyOcinkPic1 from '@/public/images/listy-ocinkovannyj-1.jpeg'
 import listyOcinkPic2 from '@/public/images/listy-ocinkovannyj-2.jpeg'
 import listyOcinkPic3 from '@/public/images/listy-ocinkovannyj-3.jpeg'
 import listyOcinkPic4 from '@/public/images/listy-ocinkovannyj-4.jpeg'
+import LightGallery from 'lightgallery/react';
 import { nlmkSiteUrl } from "@/app/constants";
-import Lightbox from "@/app/components/modals/Lightbox/Lightbox";
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from "swiper/modules";
 
 const productImagePath = '/images/list-ocink-small.png'
 const thinkness = [0.5, 0.7, 0.8, 0.9, 1.0, 1.2, 1.5, 2.0, 2.5, 3.0]
@@ -63,13 +67,28 @@ export default function CatalogSheetPage() {
             </div>
             <div>
                 <h2 className="font-bold text-2xl mb-8">Фото продукции</h2>
-                <ul className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <Swiper
+                    spaceBetween={20}
+                    slidesPerView={1}
+                    breakpoints={{ 768: { slidesPerView: 4 } }}
+                    onSlideChange={() => console.log('slide change')}
+                    navigation
+                    modules={[Navigation]}
+                    onSwiper={(swiper) => console.log(swiper)}
+                >
                     {[listyOcinkPic1, listyOcinkPic2, listyOcinkPic3, listyOcinkPic4].map((image, index) => (
                         <li key={index}>
-                            <Lightbox image={<Image className="w-full h-full" src={image} alt={`Фото продукции - Листы оцинкованные ${index + 1}`} />} />
+                            <SwiperSlide>
+                                <LightGallery
+                                    download={false}
+                                    speed={500}
+                                >
+                                    <Image className="w-full h-full cursor-pointer" src={image} alt='asd1' />
+                                </LightGallery></SwiperSlide>
                         </li>
+
                     ))}
-                </ul>
+                </Swiper>
             </div>
         </div>
     </div>)

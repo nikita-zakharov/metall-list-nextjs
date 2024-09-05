@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'lightgallery/css/lightgallery.css';
 import Header from "./components/shared/Header";
 import Footer from "./components/shared/Footer";
+
 
 const inter = Inter({ subsets: ["cyrillic"] });
 
