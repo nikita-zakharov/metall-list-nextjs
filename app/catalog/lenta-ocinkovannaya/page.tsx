@@ -10,7 +10,7 @@ export default function CatalogTapePage() {
     return (<div>
         <div style={{ background: 'url("/images/banner-lenta.png")', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }} className="relative w-full py-16">
             <div className="container">
-                <h1 className="text-white text-4xl">Лист оцинкованный</h1>
+                <h1 className="text-white text-4xl">Лента (штрипс) оцинкованная</h1>
             </div>
         </div>
         <div className="container py-20">
