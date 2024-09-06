@@ -41,7 +41,7 @@ export default function ContactsPage() {
                                 <span className="font-bold">Телефон:</span>
                                 <p><a href="tel:+7(473)2406976">8 (473) 240 69 76</a></p>
                                 <p><PhoneLink /></p>
-                                <p><a href="tel:+79531190232">+7 953 119 02 32</a></p>
+                                <p><a href="tel:+79531190232">+7 (953) 119-02-32</a></p>
                             </div>
                             <p>
                                 <span className="font-bold">Email:</span><br />

@@ -6,6 +6,25 @@ export default function PaymentAndDeliveryPage() {
             <Banner title="Оплата и доставка" imageSrc="/images/truck-banner.png" />
             <div className="container py-16">
                 <div className="mb-8">
+                    <h3 className="font-bold text-2xl mb-4">Варианты доставки</h3>
+                    <ul className="leading-8 list-disc pl-4 marker:text-orange-400">
+                        <li>
+                            <p><span className="font-bold">Самовывоз</span> — забрать товар можно самостоятельно с нашего склада по адресу:
+                                <span className="underline">г. Воронеж, ул. Базовая, 4</span>
+                            </p>
+                        </li>
+                        <li>
+                            <div>
+                                <span className="font-bold">Доставка</span> — мы можем отправить ваш заказ нашим автотранспортом
+                                <p>Cтоимость определяется индивидуально, исходя из веса и местоположения.</p>
+                                <p>Сроки доставки — со склада от 1 часа, под заказ от 1 до 3 рабочих дней.</p>
+                                <p>Для получения подробностей свяжитесь с нами по телефону <a href="tel:+79529506976" className="underline">+7 (952) 950-69-76</a> или электронной почте <a href="mailto:ser.zah70@mail.ru" className="underline">ser.zah70@mail.ru</a>.</p>
+                                <p>Мы стараемся максимально быстро доставить ваш заказ.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div>
                     <h3 className="font-bold text-2xl mb-4">Процесс оформления заявки</h3>
                     <ul className="list-decimal pl-4 leading-8 marker:text-orange-400 marker:font-bold">
                         <li>
@@ -34,25 +53,7 @@ export default function PaymentAndDeliveryPage() {
                         </li>
                     </ul>
                 </div>
-                <div>
-                    <h3 className="font-bold text-2xl mb-4">Варианты доставки</h3>
-                    <ul className="leading-8 list-disc pl-4 marker:text-orange-400">
-                        <li>
-                            <p><span className="font-bold">Самовывоз</span> — забрать товар можно самостоятельно с нашего склада по адресу:
-                                <span className="underline">г. Воронеж, ул. Базовая, 4</span>
-                            </p>
-                        </li>
-                        <li>
-                            <div>
-                                <span className="font-bold">Доставка</span> — мы можем отправить ваш заказ нашим автотранспортом
-                                <p>Cтоимость определяется индивидуально, исходя из веса и местоположения.</p>
-                                <p>Сроки доставки — от 1 до 3 рабочих дней.</p>
-                                <p>Для получения подробностей свяжитесь с нами по телефону <a href="tel:+79529506976" className="underline">+7 (952) 950-69-76</a> или электронной почте <a href="mailto:ser.zah70@mail.ru" className="underline">ser.zah70@mail.ru</a>.</p>
-                                <p>Мы стараемся максимально быстро доставить ваш заказ.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+
             </div>
         </>
     </div >)

@@ -24,8 +24,9 @@ export default function CatalogTapePage() {
                             <thead>
                                 <tr className="border-b bg-neutral-100">
                                     <th className="p-5">Наименование</th>
-                                    <th>Длина</th>
-                                    <th>Марка</th>
+                                    <th>Ширина</th>
+                                    <th>Марка стали</th>
+                                    <th>Цинк</th>
                                     <th>Производитель</th>
                                     <th>Цена (с НДС)</th>
                                     <th></th>
@@ -40,8 +41,9 @@ export default function CatalogTapePage() {
                                                 <span>Лента (штрипс) оцинкованная {Number(item).toFixed(1)} мм</span>
                                             </div>
                                         </td>
-                                        <td>Любая<br /> от 2500 до 5000 мм</td>
-                                        <td>02</td>
+                                        <td>По запросу</td>
+                                        <td>02/220/350</td>
+                                        <td>от 100 до 600</td>
                                         <td>
                                             <a href={nlmkSiteUrl} target="_blank">
                                                 <Image src={nlmkLogoPic} className="mx-auto" width="65" alt="Логотип компании НЛМК" />

@@ -1,13 +1,10 @@
 import CatalogNavigation from "../CatalogNavigation"
 import nlmkLogoPic from '@/public/images/NLMK-logo.png'
-import rulonOcinkPic1 from '@/public/images/rulon-ocinkovannyj-1.jpeg'
-import rulonOcinkPic2 from '@/public/images/rulon-ocinkovannyj-2.jpeg'
 import { nlmkSiteUrl } from "@/app/constants";
 import Image from "next/image";
-import LightGalleryWrapper from "@/app/components/shared/LightGalleryWrapper";
 
 const productImagePath = '/images/rulon-small.png'
-const thinkness = [0.5, 0.7, 0.8, 0.9, 1.0, 1.2, 1.5, 2.0, 2.5, 3.0]
+const thinkness = [0.5, 0.7, 0.8, 0.9, 1.0, 1.2, 1.5, 2.0, 2.5, 3.0, 4.0]
 
 export default function CatalogRollPage() {
     return (<div><div style={{ background: 'url("/images/banner-rulon.png")', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }} className="relative w-full py-16">
@@ -26,8 +23,9 @@ export default function CatalogRollPage() {
                             <thead>
                                 <tr className="border-b bg-neutral-100">
                                     <th className="p-5">Наименование</th>
-                                    <th>Длина</th>
-                                    <th>Марка</th>
+                                    <th>Ширина</th>
+                                    <th>Марка стали</th>
+                                    <th>Цинк</th>
                                     <th>Производитель</th>
                                     <th>Цена (с НДС)</th>
                                     <th></th>
@@ -42,8 +40,12 @@ export default function CatalogRollPage() {
                                                 <span>Рулон оцинкованный {Number(item).toFixed(1)} мм</span>
                                             </div>
                                         </td>
-                                        <td>Любая<br /> от 2500 до 5000 мм</td>
-                                        <td>02</td>
+                                        <td>
+                                            <p>от 0.950 мм</p>
+                                            <p>до 1550 мм</p>
+                                        </td>
+                                        <td>02/220/350</td>
+                                        <td>от 100 до 600</td>
                                         <td>
                                             <a href={nlmkSiteUrl} target="_blank">
                                                 <Image src={nlmkLogoPic} className="mx-auto" width="65" alt="Логотип компании НЛМК" />
@@ -58,15 +60,6 @@ export default function CatalogRollPage() {
                     </div>
                 </div>
             </div>
-            <div>
-                <h2 className="font-bold text-2xl mb-8">Фото продукции</h2>
-                <LightGalleryWrapper
-                    elementClassNames="grid grid-cols-1 lg:grid-cols-4 gap-4 cursor-pointer"
-                >
-                    {[rulonOcinkPic1, rulonOcinkPic2].map((image, index) => (
-                        <Image className="w-full h-full" src={image} alt={`Фото продукции - Рулон оцинкованный ${index + 1}`} />
-                    ))}
-                </LightGalleryWrapper>
-            </div>
-        </div></div>)
+        </div>
+    </div>)
 }

@@ -30,8 +30,10 @@ export default function CatalogSheetPage() {
                             <thead>
                                 <tr className="border-b bg-neutral-100">
                                     <th className="p-5">Наименование</th>
+                                    <th>Ширина</th>
                                     <th>Длина</th>
-                                    <th>Марка</th>
+                                    <th>Марка стали</th>
+                                    <th>Цинк</th>
                                     <th>Производитель</th>
                                     <th>Цена (с НДС)</th>
                                     <th></th>
@@ -46,8 +48,16 @@ export default function CatalogSheetPage() {
                                                 <span>Лист оцинкованный {Number(item).toFixed(1)} мм</span>
                                             </div>
                                         </td>
-                                        <td>Любая<br /> от 2500 до 5000 мм</td>
-                                        <td>02</td>
+                                        <td>
+                                            <p>от 0.950 мм</p>
+                                            <p>до 1550 мм</p>
+                                        </td>
+                                        <td>
+                                            <p>Любая</p>
+                                            <p>до 5000 мм</p>
+                                        </td>
+                                        <td>02/220/350</td>
+                                        <td>от 100 до 600</td>
                                         <td>
                                             <a href={nlmkSiteUrl} target="_blank">
                                                 <Image src={nlmkLogoPic} className="mx-auto" width="65" alt="Логотип компании НЛМК" />

@@ -22,7 +22,7 @@ const OurProducts = () => {
                                     </div>
                                     <div className="text-sm mb-24">
                                         <p>Толщина:</p>
-                                        <p>от 0.5 до 3 мм</p>
+                                        <p>от 0.3 до 4 мм</p>
                                         <p>Длина: любая</p>
                                     </div>
                                     <div className="absolute top-[85px] right-2">
@@ -45,8 +45,7 @@ const OurProducts = () => {
                                     </div>
                                     <div className="text-sm mb-24">
                                         <p>Толщина:</p>
-                                        <p>от 0.5 до 3 мм</p>
-                                        <p>Длина: любая</p>
+                                        <p>от 0.3 до 4 мм</p>
                                     </div>
                                     <div className="absolute top-[65px] -right-6">
                                         <Image src={rollPic} className="opacity-60 w-[280px]" alt="Рулон оцинкованный" />
@@ -67,8 +66,7 @@ const OurProducts = () => {
                                 </div>
                                 <div className="text-sm mb-24">
                                     <p>Толщина:</p>
-                                    <p>от 0.5 до 3 мм</p>
-                                    <p>Длина: любая</p>
+                                    <p>от 0.3 до 3 мм</p>
                                 </div>
                                 <div className="absolute top-[75px] right-2">
                                     <Image src={tapePic} className="opacity-60 w-[200px]" alt="Лента (штрипс) оцинкованная" />

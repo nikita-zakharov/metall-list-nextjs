@@ -12,7 +12,7 @@ const HeroSection = () => {
             }}>
                 <div className="container pt-24 pb-48 px-4 sm:px-0 text-white">
                     <h1 className="xl:text-6xl text-4xl mb-8 font-medium">
-                        Оцинкованная сталь<br /> доставка от 2 часов по Воронежу
+                        Оцинкованная сталь<br /> с доставкой от 1 часа в Воронеже
                     </h1>
                     <div
                         className="w-1/2 mb-8 leading-7 font-light"

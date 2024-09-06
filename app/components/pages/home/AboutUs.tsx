@@ -18,19 +18,19 @@ const AboutUs = () => {
                 <div>
                     <ul className="grid grid-cols-2 gap-14">
                         <li>
-                            <p className="text-orange-400 text-6xl font-bold">12</p>
+                            <p className="text-orange-400 text-6xl font-bold">{(new Date().getFullYear() - 2012)}+</p>
                             <p className="font-bold">лет опыта в сфере</p>
                         </li>
                         <li>
-                            <p className="text-orange-400 text-6xl font-bold">200+</p>
+                            <p className="text-orange-400 text-6xl font-bold">1000+</p>
                             <p className="font-bold">тонн поставляем ежемесячно</p>
                         </li>
                         <li>
-                            <p className="text-orange-400 text-6xl font-bold">30+</p>
+                            <p className="text-orange-400 text-6xl font-bold">80+</p>
                             <p className="font-bold">довольных клиентов</p>
                         </li>
                         <li>
-                            <p className="text-orange-400 text-6xl font-bold">50+</p>
+                            <p className="text-orange-400 text-6xl font-bold">30+</p>
                             <p className="font-bold">успешно завершенных объектов</p>
                         </li>
                     </ul>
