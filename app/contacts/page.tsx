@@ -10,16 +10,16 @@ export default function ContactsPage() {
             <Banner title="Контакты" imageSrc="/images/banner-lenta.png" />
             <div className="container py-20">
                 <div className="grid xl:grid-cols-12 gap-8">
-                    <div className="col-span-8">
+                    <div className="col-span-12 lg:col-span-8">
                         <YandexMap />
                     </div>
-                    <div className="col-span-4 order-first xl:order-none  leading-7">
+                    <div className="col-span-12 lg:col-span-4 order-first xl:order-none  leading-7">
                         <div className="mb-4">
                             <div>
-                                <p>
-                                    Индивидуальный предприниматель
-                                    Захаров Сергей Александрович
-                                </p>
+                                <div>
+                                    <p>Индивидуальный предприниматель</p>
+                                    <p>Захаров Сергей Александрович</p>
+                                </div>
                                 <p>ИНН 366103728670</p>
                                 <p>Р/сч 40802810413000046954</p>
                                 <p>ЦЕНТРАЛЬНО-ЧЕРНОЗЕМНЫЙ БАНК ПАО СБЕРБАНК</p>
@@ -39,7 +39,7 @@ export default function ContactsPage() {
                             </p>
                             <div>
                                 <span className="font-bold">Телефон:</span>
-                                <p><a href="tel:+7(473)2406976">8 (473) 240 69 76</a></p>
+                                <p><a href="tel:+7(473)2406976">+7 (473) 240 69 76</a></p>
                                 <p><PhoneLink /></p>
                                 <p><a href="tel:+79531190232">+7 (953) 119-02-32</a></p>
                             </div>

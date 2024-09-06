@@ -17,7 +17,7 @@ export default function Header() {
         setOpen(false)
     }, [pathname])
 
-    return (<header className=" shadow bg-white">
+    return (<header className="sticky top-0 z-20 shadow bg-white">
         <div className="lg:block hidden">
             <div className="bg-stone-100">
                 <div className="container">
@@ -61,8 +61,8 @@ export default function Header() {
             </div>
         </div>
         <div className="lg:hidden bg-white p-4">
-            <div className="flex justify-between">
-                <p>Металл-лист</p>
+            <div className="flex justify-between items-center">
+                <p className="font-bold text-lg uppercase">Металл-лист</p>
                 <button onClick={() => setOpen(true)} className="text-3xl"><BsList /></button>
             </div>
             {open && <div className="bg-gray-100 fixed top-0 left-0 z-20 w-full h-full">

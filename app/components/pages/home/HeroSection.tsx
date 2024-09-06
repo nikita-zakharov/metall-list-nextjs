@@ -10,12 +10,12 @@ const HeroSection = () => {
                 backgroundPosition: 'center',
                 backgroundSize: 'cover'
             }}>
-                <div className="container pt-24 pb-48 px-4 sm:px-0 text-white">
-                    <h1 className="xl:text-6xl text-4xl mb-8 font-medium">
+                <div className="container pt-20 lg:pt-24 pb-44 lg:pb-48 px-4 sm:px-0 text-white">
+                    <h1 className="xl:text-6xl text-3xl lg:mb-8 mb-4 font-medium">
                         Оцинкованная сталь<br /> с доставкой от 1 часа в Воронеже
                     </h1>
                     <div
-                        className="w-1/2 mb-8 leading-7 font-light"
+                        className="lg:w-1/2 mb-8 leading-7 font-light"
                     >
                         В листах, рулонах и ленте(штрипс). Производство ПАО «НЛМК» (г.Липецк)
                     </div>
