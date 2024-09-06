@@ -75,10 +75,10 @@ export default function CatalogSheetPage() {
                     <h2 className="font-bold text-2xl mb-8">Фото продукции</h2>
                     <nav>
                         <LightGalleryWrapper
-                            elementClassNames="grid grid-cols-1 lg:grid-cols-4 gap-4 cursor-pointer"
+                            elementClassNames="grid grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-4 cursor-pointer"
                         >
                             {gallery.map((image, index) => (
-                                <Image className="h-full" src={image} key={index} alt={`Фото продукции - Лист оцинкованный №${index + 1}`} />
+                                <Image className="h-full rounded-lg" src={image} key={index} alt={`Фото продукции - Лист оцинкованный №${index + 1}`} />
                             ))}
                         </LightGalleryWrapper>
                     </nav>
