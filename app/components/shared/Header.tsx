@@ -8,6 +8,8 @@ import PhoneLink from "./PhoneLink";
 import Button from "./Button";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import CallbackModal from "../modals/CallbackModal/CallbackModal";
+import { useCallbackModal } from "../modals/CallbackModal/CallbackModalProvider";
 
 const MobileMenu = () => {
     const [open, setOpen] = useState(false)
@@ -83,6 +85,8 @@ const MobileMenu = () => {
 }
 
 export default function Header() {
+    const callbackModal = useCallbackModal()
+
     return (
         <header className="sticky top-0 z-20 shadow bg-white">
             <div className="lg:block hidden">
@@ -122,7 +126,7 @@ export default function Header() {
                                 <li><Link href={LinkUrl.PaymentAndDelivery}>Оплата и доставка</Link></li>
                                 <li><Link href={LinkUrl.Contacts}>Контакты</Link></li>
                             </nav>
-                            <Button>Запросить цены</Button>
+                            <Button onClick={() => callbackModal.show()}>Запросить цены</Button>
                         </div>
                     </div>
                 </div>

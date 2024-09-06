@@ -5,6 +5,7 @@ import { nlmkSiteUrl } from "@/app/constants";
 import Image from "next/image";
 import Banner from "@/app/components/shared/Banner";
 import SectionContainer from "@/app/components/shared/SectionContainer";
+import BuyButton from "../BuyButton";
 
 const thinkness = [0.5, 0.7, 0.8, 0.9, 1.0, 1.2, 1.5, 2.0, 2.5, 3.0, 4.0]
 
@@ -54,7 +55,9 @@ export default function CatalogRollPage() {
                                                     </a>
                                                 </td>
                                                 <td>По запросу</td>
-                                                <td><button className="rounded-full bg-orange-400 px-7 py-2 text-white">Купить</button></td>
+                                                <td>
+                                                    <BuyButton />
+                                                </td>
                                             </tr>
                                         ))}
                                     </tbody>

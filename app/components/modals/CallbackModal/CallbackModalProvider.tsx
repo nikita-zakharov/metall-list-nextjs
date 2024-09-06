@@ -1,3 +1,5 @@
+'use client'
+
 import dynamic from "next/dynamic";
 import React, { createContext, useCallback, useContext, useState } from "react";
 import { createPortal } from "react-dom";
