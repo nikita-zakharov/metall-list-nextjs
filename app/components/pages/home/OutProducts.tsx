@@ -5,20 +5,21 @@ import Image from "next/image"
 import sheetPic from '@/public/images/listy-pachka.png'
 import rollPic from '@/public/images/rulon-ocink.png'
 import tapePic from '@/public/images/lenta-shtrips-rulon.png'
+import SectionContainer from "../../shared/SectionContainer"
 
 const OurProducts = () => {
     return (
-        <section className="py-12 lg:py-16">
+        <SectionContainer>
             <div className="container">
                 <SectionHeading title="Наша продукция" description="Широкий ассортимент оцинкованной стали" />
-                <ul className="grid xl:grid-cols-3 grid-cols-1 gap-14">
+                <ul className="grid xl:grid-cols-3 grid-cols-1 gap-8">
                     <li>
                         <div className="bg-stone-100 py-8 px-10 rounded-xl relative h-full">
-                            <div className="flex flex-col justify-between">
+                            <div className="flex flex-col justify-between h-full">
                                 <div>
                                     <div className="mb-4">
-                                        <p className="font-bold text-2xl lg:text-3xl">Сталь оцинкованная</p>
-                                        <p className="font-bold text-2xl lg:text-3xl text-orange-400">в листах</p>
+                                        <p className="font-bold text-2xl">Сталь оцинкованная</p>
+                                        <p className="font-bold text-2xl text-orange-400">в листах</p>
                                     </div>
                                     <div className="text-sm mb-24">
                                         <p>Толщина:</p>
@@ -37,11 +38,11 @@ const OurProducts = () => {
                     </li>
                     <li>
                         <div className="bg-stone-100 py-8 px-10 rounded-xl relative h-full">
-                            <div className="flex flex-col justify-between">
+                            <div className="flex flex-col justify-between h-full">
                                 <div>
                                     <div className="mb-4">
-                                        <p className="font-bold text-2xl lg:text-3xl">Сталь оцинкованная</p>
-                                        <p className="font-bold text-2xl lg:text-3xl text-orange-400">в рулонах</p>
+                                        <p className="font-bold text-2xl">Сталь оцинкованная</p>
+                                        <p className="font-bold text-2xl text-orange-400">в рулонах</p>
                                     </div>
                                     <div className="text-sm mb-24">
                                         <p>Толщина:</p>
@@ -59,11 +60,11 @@ const OurProducts = () => {
                     </li>
                     <li>
                         <div className="bg-stone-100 py-8 px-10 rounded-xl relative h-full">
-                            <div className="flex flex-col justify-between">
+                            <div className="flex flex-col justify-between h-full">
                                 <div>
                                     <div className="mb-4 relative">
-                                        <p className="font-bold text-2xl lg:text-3xl">Сталь оцинкованная</p>
-                                        <p className="font-bold text-2xl lg:text-3xl text-orange-400">в ленте</p>
+                                        <p className="font-bold text-2xl">Сталь оцинкованная</p>
+                                        <p className="font-bold text-2xl text-orange-400">в ленте</p>
                                     </div>
                                     <div className="text-sm mb-24">
                                         <p>Толщина:</p>
@@ -77,10 +78,11 @@ const OurProducts = () => {
                                     <Link href={LinkUrl.CatalogTape}><button className="bg-orange-400 text-white px-6 py-2 rounded-full">Каталог</button></Link>
                                 </div>
                             </div>
-                        </div></li>
+                        </div>
+                    </li>
                 </ul>
             </div>
-        </section>
+        </SectionContainer>
     )
 }
 

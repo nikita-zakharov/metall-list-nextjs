@@ -24,7 +24,7 @@ export default function CatalogNavigation() {
                 <Link
                     href={LinkUrl.CatalogTape}
                     className="underline">
-                    Штрипс(лента) оцинкованная
+                    Лента (штрипс) оцинкованная
                 </Link>
             </li>
         </ul></div>

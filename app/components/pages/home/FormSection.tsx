@@ -3,6 +3,7 @@ import { SubmitHandler, useForm } from "react-hook-form"
 import Button from "../../shared/Button"
 import SectionHeading from "../../shared/SectionHeading"
 import YandexMap from "../../shared/YandexMap"
+import SectionContainer from "../../shared/SectionContainer"
 
 type FormValues = {
     name: string
@@ -34,7 +35,7 @@ const FormSection = () => {
     }
 
     return (
-        <section className="py-16 relative">
+        <SectionContainer>
             <div className="container">
                 <SectionHeading title="Оставьте заявку" description="Мы свяжемся с Вами в ближайшее время" />
                 <form onSubmit={handleSubmit(onSubmit)}
@@ -87,7 +88,7 @@ const FormSection = () => {
                     </div>
                 </form>
             </div>
-        </section>
+        </SectionContainer>
     )
 }
 

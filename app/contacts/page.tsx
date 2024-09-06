@@ -1,14 +1,15 @@
 import Banner from "../components/shared/Banner";
 import EmailLink from "../components/shared/EmailLink";
 import PhoneLink from "../components/shared/PhoneLink";
+import SectionContainer from "../components/shared/SectionContainer";
 import YandexMap from "../components/shared/YandexMap";
 import { openingHours } from "../constants";
 
 export default function ContactsPage() {
     return (<div>
-        <div>
-            <Banner title="Контакты" imageSrc="/images/banner-lenta.png" />
-            <div className="container py-20">
+        <Banner title="Контакты" imageSrc="/images/banner-lenta.png" />
+        <SectionContainer>
+            <div className="container">
                 <div className="grid xl:grid-cols-12 gap-8">
                     <div className="col-span-12 lg:col-span-8">
                         <YandexMap />
@@ -51,6 +52,6 @@ export default function ContactsPage() {
                     </div>
                 </div>
             </div>
-        </div>
+        </SectionContainer>
     </div>)
 }
