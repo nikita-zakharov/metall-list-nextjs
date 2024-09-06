@@ -1,7 +1,6 @@
 import CatalogNavigation from "../CatalogNavigation"
 import nlmkLogoPic from '@/public/images/NLMK-logo.png'
 import rulonSmall from '@/public/images/rulon-small.png'
-import { nlmkSiteUrl } from "@/app/constants";
 import Image from "next/image";
 import Banner from "@/app/components/shared/Banner";
 import SectionContainer from "@/app/components/shared/SectionContainer";
@@ -50,9 +49,7 @@ export default function CatalogRollPage() {
                                                 <td>02/220/350</td>
                                                 <td>от 100 до 600</td>
                                                 <td>
-                                                    <a href={nlmkSiteUrl} target="_blank">
-                                                        <Image src={nlmkLogoPic} className="mx-auto" width="65" alt="Логотип компании НЛМК" />
-                                                    </a>
+                                                    <Image src={nlmkLogoPic} className="mx-auto" width="65" alt="Логотип компании НЛМК" />
                                                 </td>
                                                 <td>По запросу</td>
                                                 <td>

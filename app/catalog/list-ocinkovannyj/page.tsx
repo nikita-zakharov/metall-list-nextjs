@@ -6,7 +6,6 @@ import listyOcinkPic2 from '@/public/images/listy-ocinkovannyj-2.jpeg'
 import listyOcinkPic3 from '@/public/images/listy-ocinkovannyj-3.jpeg'
 import listyOcinkPic4 from '@/public/images/listy-ocinkovannyj-4.jpeg'
 import listyOcinkSmall from '@/public/images/list-ocink-small.png'
-import { nlmkSiteUrl } from "@/app/constants";
 import LightGalleryWrapper from "@/app/components/shared/LightGalleryWrapper";
 import Banner from "@/app/components/shared/Banner";
 import SectionContainer from "@/app/components/shared/SectionContainer";
@@ -63,9 +62,7 @@ export default function CatalogSheetPage() {
                                             <td>02/220/350</td>
                                             <td>от 100 до 600</td>
                                             <td>
-                                                <a href={nlmkSiteUrl} target="_blank">
-                                                    <Image src={nlmkLogoPic} className="mx-auto" width="65" alt="Логотип компании НЛМК" />
-                                                </a>
+                                                <Image src={nlmkLogoPic} className="mx-auto" width="65" alt="Логотип компании НЛМК" />
                                             </td>
                                             <td>По запросу</td>
                                             <td>
