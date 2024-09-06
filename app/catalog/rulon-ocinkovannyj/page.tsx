@@ -23,7 +23,7 @@ export default function CatalogRollPage() {
                                 <table className="w-full block lg:table overflow-x-auto">
                                     <thead>
                                         <tr className="border-b bg-neutral-100">
-                                            <th className="p-5">Наименование</th>
+                                            <th>Наименование</th>
                                             <th>Ширина</th>
                                             <th>Марка стали</th>
                                             <th>Цинк</th>
@@ -35,10 +35,11 @@ export default function CatalogRollPage() {
                                     <tbody>
                                         {thinkness.map(item => (
                                             <tr className="border-b text-center text-sm" key={item}>
-                                                <td className="py-5">
+                                                <td>
                                                     <div className="flex items-center gap-4 justify-center">
                                                         <Image src={rulonSmall} width="40" alt="Рулон оцинкованный" />
-                                                        <span>Рулон оцинкованный {Number(item).toFixed(1)} мм</span>
+                                                        <p>Рулон оцинкованный</p>
+                                                        <p>{Number(item).toFixed(1)} мм</p>
                                                     </div>
                                                 </td>
                                                 <td>

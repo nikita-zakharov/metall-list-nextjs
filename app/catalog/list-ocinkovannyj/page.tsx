@@ -28,7 +28,8 @@ export default function CatalogSheetPage() {
                             <table className="w-full block lg:table overflow-x-auto">
                                 <thead>
                                     <tr className="border-b bg-neutral-100">
-                                        <th className="p-5">Наименование</th>
+                                        <th></th>
+                                        <th>Наименование</th>
                                         <th>Ширина</th>
                                         <th>Длина</th>
                                         <th>Марка стали</th>
@@ -41,11 +42,14 @@ export default function CatalogSheetPage() {
                                 <tbody>
                                     {thinkness.map(item => (
                                         <tr className="border-b text-center text-sm" key={item}>
-                                            <td className="py-5">
-                                                <div className="flex items-center gap-4 justify-center">
+                                            <td>
+                                                <div className="flex items-center justify-center">
                                                     <Image src={listyOcinkSmall} width="40" alt="Лист оцинкованный" />
-                                                    <span>Лист оцинкованный {Number(item).toFixed(1)} мм</span>
                                                 </div>
+                                            </td>
+                                            <td>
+                                                <p>Лист оцинкованный</p>
+                                                <p>{Number(item).toFixed(1)} мм</p>
                                             </td>
                                             <td>
                                                 <p>от 0.950 мм</p>
@@ -63,7 +67,11 @@ export default function CatalogSheetPage() {
                                                 </a>
                                             </td>
                                             <td>По запросу</td>
-                                            <td><button className="rounded-full bg-orange-400 px-7 py-2 text-white">Купить</button></td>
+                                            <td>
+                                                <button className="rounded-full bg-orange-400 px-7 py-2 text-white">
+                                                    Купить
+                                                </button>
+                                            </td>
                                         </tr>
                                     ))}
                                 </tbody>
@@ -84,6 +92,6 @@ export default function CatalogSheetPage() {
                     </nav>
                 </div>
             </div>
-        </SectionContainer>
-    </div>)
+        </SectionContainer >
+    </div >)
 }

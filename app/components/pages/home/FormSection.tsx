@@ -39,8 +39,8 @@ const FormSection = () => {
             <div className="container">
                 <SectionHeading title="Оставьте заявку" description="Мы свяжемся с Вами в ближайшее время" />
                 <form onSubmit={handleSubmit(onSubmit)}
-                    className="grid grid-cols-12 gap-y-14 xl:gap-x-20">
-                    <div className="col-span-12 xl:col-span-4">
+                    className="grid grid-cols-12 gap-x-16">
+                    <div className="col-span-12 lg:col-span-4">
                         <div className="mb-4">
                             <label className="block text-sm mb-1" htmlFor="name">Имя</label>
                             <input {...register('name', { required: { value: true, message: 'Обязательное поле' } })}
@@ -79,7 +79,7 @@ const FormSection = () => {
                             Отправить
                         </Button>
                     </div>
-                    <div className="col-span-12 xl:col-span-8">
+                    <div className="col-span-12 lg:col-span-8">
                         <div className="relative overflow-hidden">
                             <div className="w-full">
                                 <YandexMap />
