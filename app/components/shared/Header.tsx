@@ -8,7 +8,6 @@ import PhoneLink from "./PhoneLink";
 import Button from "./Button";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import CallbackModal from "../modals/CallbackModal/CallbackModal";
 import { useCallbackModal } from "../modals/CallbackModal/CallbackModalProvider";
 
 const MobileMenu = () => {
@@ -34,19 +33,20 @@ const MobileMenu = () => {
                     </div>
                     <nav className="mt-8 flex flex-col list-none gap-1">
                         <li className="flex justify-between items-center border-b p-4">
-                            <Link className="w-full" href={LinkUrl.Home}>Главная</Link>
+                            <Link className={`w-full link ${pathname === LinkUrl.Home ? 'active' : ''}`}
+                                href={LinkUrl.Home}>Главная</Link>
                             <BsChevronRight className="text-xl text-gray-400" />
                         </li>
                         <li className="flex justify-between items-center border-b p-4">
-                            <Link className="w-full" href={LinkUrl.CatalogSheet}>Каталог</Link>
+                            <Link className={`w-full link ${pathname.includes(LinkUrl.CatalogRoot) ? 'active' : ''}`} href={LinkUrl.CatalogSheet}>Каталог</Link>
                             <BsChevronRight className="text-xl text-gray-400" />
                         </li>
                         <li className="flex justify-between items-center border-b p-4">
-                            <Link className="w-full" href={LinkUrl.PaymentAndDelivery}>Оплата и доставка</Link>
+                            <Link className={`w-full link ${pathname === LinkUrl.PaymentAndDelivery ? 'active' : ''}`} href={LinkUrl.PaymentAndDelivery}>Оплата и доставка</Link>
                             <BsChevronRight className="text-xl text-gray-400" />
                         </li>
                         <li className="flex justify-between items-center border-b  p-4">
-                            <Link className="w-full" href={LinkUrl.Contacts}>Контакты</Link>
+                            <Link className={`w-full link ${pathname === LinkUrl.Contacts ? 'active' : ''}`} href={LinkUrl.Contacts}>Контакты</Link>
                             <BsChevronRight className="text-xl text-gray-400" />
                         </li>
                     </nav>
@@ -86,6 +86,7 @@ const MobileMenu = () => {
 
 export default function Header() {
     const callbackModal = useCallbackModal()
+    const pathname = usePathname()
 
     return (
         <header className="sticky top-0 z-20 shadow bg-white">
@@ -121,10 +122,30 @@ export default function Header() {
                         </div>
                         <div className="flex items-center">
                             <nav className="flex items-center py-7 mr-14 list-none gap-10">
-                                <li><Link href={LinkUrl.Home}>Главная</Link></li>
-                                <li><Link href={LinkUrl.CatalogSheet}>Каталог</Link></li>
-                                <li><Link href={LinkUrl.PaymentAndDelivery}>Оплата и доставка</Link></li>
-                                <li><Link href={LinkUrl.Contacts}>Контакты</Link></li>
+                                <li>
+                                    <Link className={`link ${pathname === LinkUrl.Home ? 'active' : ''}`}
+                                        href={LinkUrl.Home}>
+                                        Главная
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link className={`link ${pathname.includes(LinkUrl.CatalogRoot) ? 'active' : ''}`}
+                                        href={LinkUrl.CatalogSheet}>
+                                        Каталог
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link className={`link ${pathname === LinkUrl.PaymentAndDelivery ? 'active' : ''}`}
+                                        href={LinkUrl.PaymentAndDelivery}>
+                                        Оплата и доставка
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link className={`link ${pathname === LinkUrl.Contacts ? 'active' : ''}`}
+                                        href={LinkUrl.Contacts}>
+                                        Контакты
+                                    </Link>
+                                </li>
                             </nav>
                             <Button onClick={() => callbackModal.show()}>Запросить цены</Button>
                         </div>

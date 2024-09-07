@@ -19,4 +19,16 @@ html {
   table {
     @apply border;
   }
+
+  button {
+    @apply hover:scale-105 transition-transform;
+  }
+
+  a {
+    @apply hover:text-orange-400 transition-colors;
+  }
+
+  .link.active {
+    @apply text-orange-400;
+  }
 }
