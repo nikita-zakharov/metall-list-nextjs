@@ -10,6 +10,7 @@ import LightGalleryWrapper from "@/app/components/shared/LightGalleryWrapper";
 import Banner from "@/app/components/shared/Banner";
 import SectionContainer from "@/app/components/shared/SectionContainer";
 import BuyButton from "../BuyButton";
+import { BsCheckCircle } from "react-icons/bs";
 
 const thinkness = [0.5, 0.7, 0.8, 0.9, 1.0, 1.2, 1.5, 2.0, 2.5, 3.0]
 const gallery = [listyOcinkPic1, listyOcinkPic2, listyOcinkPic3, listyOcinkPic4]
@@ -19,16 +20,21 @@ export default function CatalogSheetPage() {
         <Banner imageSrc="/images/banner-list-ocinkovannyj.webp" title="Лист оцинкованный" />
         <SectionContainer>
             <div className="container">
-                <div className="mb-16">
+                <div className="mb-12">
                     <CatalogNavigation />
                 </div>
                 <div className="mb-16">
                     <div>
                         <div>
+                            <ul className="mb-8">
+                                <li className="flex items-center gap-2">
+                                    <BsCheckCircle className="text-xl text-orange-400" />
+                                    <p>Всегда в наличии стандартный лист 1250x2500 мм, всех толщин.</p>
+                                </li>
+                            </ul>
                             <table className="w-full block lg:table overflow-x-auto">
                                 <thead>
                                     <tr className="border-b bg-neutral-100">
-                                        <th></th>
                                         <th>Наименование</th>
                                         <th>Ширина</th>
                                         <th>Длина</th>
@@ -43,13 +49,12 @@ export default function CatalogSheetPage() {
                                     {thinkness.map(item => (
                                         <tr className="border-b text-center text-sm" key={item}>
                                             <td>
-                                                <div className="flex items-center justify-center">
+                                                <div className="flex items-center gap-2 pl-2">
                                                     <Image src={listyOcinkSmall} width="40" alt="Лист оцинкованный" />
+
+                                                    <p>Лист оцинкованный</p>
+                                                    <p>{Number(item).toFixed(1)} мм</p>
                                                 </div>
-                                            </td>
-                                            <td>
-                                                <p>Лист оцинкованный</p>
-                                                <p>{Number(item).toFixed(1)} мм</p>
                                             </td>
                                             <td>
                                                 <p>от 0.950 мм</p>

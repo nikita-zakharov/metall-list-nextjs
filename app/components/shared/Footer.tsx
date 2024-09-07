@@ -6,7 +6,7 @@ import { LinkUrl } from "@/app/types";
 
 export default function Footer() {
     return (<footer className="bg-neutral-800 text-gray-200 py-8">
-        <div className="container">
+        <div className="container text-sm">
             <div className="grid lg:grid-cols-12 gap-6 text-neutral-300 leading-7">
                 <div className="col-span-5">
                     <p className="text-xl mb-3">Металл-лист</p>
@@ -30,9 +30,9 @@ export default function Footer() {
                 </div>
             </div>
             <hr className="my-8 border-t-neutral-500" />
-            <div className="lg:grid grid-cols-12 text-neutral-400">
-                <div className="col-span-6"><p className="text-sm">© 2012-2024 «Металл лист». Все права защищены.</p></div>
-                <div className="col-span-6 justify-self-end"><Link href="/policy" className="text-sm underline">Политика конфиденциальности</Link></div>
+            <div className="lg:grid grid-cols-12 text-neutral-400 text-xs">
+                <div className="col-span-6"><p>© 2012-2024 «Металл лист». Все права защищены.</p></div>
+                <div className="col-span-6 justify-self-end"><Link href="/policy" className="underline">Политика конфиденциальности</Link></div>
             </div>
         </div>
     </footer>)

@@ -1,11 +1,11 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 import Header from "./components/shared/Header";
 import Footer from "./components/shared/Footer";
 import CallbackModalProvider from "./components/modals/CallbackModal/CallbackModalProvider";
 
-const inter = Inter({ subsets: ["cyrillic"] });
+const font = Open_Sans({ subsets: ["cyrillic"] });
 
 export const metadata: Metadata = {
   title: "Оцинкованная сталь в Воронеже | Металл-лист",
@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <CallbackModalProvider>
       <html lang="en">
-        <body className={inter.className}>
+        <body className={font.className}>
           <Header />
           <main className="min-h-[600px]">
             {children}

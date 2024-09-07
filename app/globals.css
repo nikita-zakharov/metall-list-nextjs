@@ -15,4 +15,8 @@ html {
   td {
     @apply py-5;
   }
+
+  table {
+    @apply border;
+  }
 }

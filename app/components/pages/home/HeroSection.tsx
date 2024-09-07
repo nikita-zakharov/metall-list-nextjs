@@ -17,7 +17,7 @@ const HeroSection = () => {
                     <div
                         className="lg:w-1/2 mb-8 leading-7 font-light"
                     >
-                        В листах, рулонах и ленте(штрипс). Производство ПАО «НЛМК» (г.Липецк)
+                        В листах, рулонах и ленте(штрипс). Производство ПАО «НЛМК» (г.Липецк).
                     </div>
 
                     <div className="flex items center">
