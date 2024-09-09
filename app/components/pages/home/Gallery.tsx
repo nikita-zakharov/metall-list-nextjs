@@ -14,14 +14,14 @@ const Gallery = () => {
     return <SectionContainer>
         <div className="container">
             <SectionHeading title="Галерея" description="Фотоотчет нашей работы" />
-            <LightGalleryWrapper elementClassNames='grid lg:grid-cols-12 gap-4'>
-                <Image className="h-full w-full col-span-4 rounded-lg cursor-pointer" src={skladPic} alt="Склад" />
-                <Image className="h-full w-full col-span-4 rounded-lg cursor-pointer" src={pogruzkaPic} alt="Процесс погрузки продукции" />
-                <Image className="h-full w-full col-span-4 rounded-lg cursor-pointer" src={dorogaNaSklad} alt="Листы оцинкованные №5" />
-                <Image className="h-full w-full col-span-3 rounded-lg cursor-pointer" src={listyOcinkovannyj1} alt="Листы оцинкованные №1" />
-                <Image className="h-full w-full col-span-3 rounded-lg cursor-pointer" src={listyOcinkovannyj2} alt="Листы оцинкованные №2" />
-                <Image className="h-full w-full col-span-3 rounded-lg cursor-pointer" src={listyOcinkovannyj3} alt="Листы оцинкованные №3" />
-                <Image className="h-full w-full col-span-3 rounded-lg cursor-pointer" src={listyOcinkovannyj4} alt="Листы оцинкованные №4" />
+            <LightGalleryWrapper elementClassNames='grid grid-cols-12 gap-4'>
+                <Image className="h-full w-full col-span-12 lg:col-span-4 rounded-lg cursor-pointer" src={skladPic} alt="Склад" />
+                <Image className="h-full w-full col-span-12 lg:col-span-4 rounded-lg cursor-pointer" src={pogruzkaPic} alt="Процесс погрузки продукции" />
+                <Image className="h-full w-full col-span-12 lg:col-span-4 rounded-lg cursor-pointer" src={dorogaNaSklad} alt="Листы оцинкованные №5" />
+                <Image className="h-full w-full col-span-6 lg:col-span-3 rounded-lg cursor-pointer" src={listyOcinkovannyj1} alt="Листы оцинкованные №1" />
+                <Image className="h-full w-full col-span-6 lg:col-span-3 rounded-lg cursor-pointer" src={listyOcinkovannyj2} alt="Листы оцинкованные №2" />
+                <Image className="h-full w-full col-span-6 lg:col-span-3 rounded-lg cursor-pointer" src={listyOcinkovannyj3} alt="Листы оцинкованные №3" />
+                <Image className="h-full w-full col-span-6 lg:col-span-3 rounded-lg cursor-pointer" src={listyOcinkovannyj4} alt="Листы оцинкованные №4" />
             </LightGalleryWrapper>
         </div>
     </SectionContainer>

@@ -39,7 +39,7 @@ const FormSection = () => {
         <SectionContainer>
             <div className="container">
                 <SectionHeading title="Оставьте заявку" description="Мы свяжемся с Вами в ближайшее время" />
-                <div className="grid grid-cols-12 gap-x-16 gap-y-10 lg:gap-y-10">
+                <div className="grid grid-cols-12 lg:gap-x-16 gap-y-10 lg:gap-y-10">
                     <div className="col-span-12 lg:col-span-4">
                         <Form />
                     </div>
