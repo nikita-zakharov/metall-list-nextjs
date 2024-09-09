@@ -8,6 +8,7 @@ import SectionContainer from "@/app/components/shared/SectionContainer";
 import BuyButton from "../BuyButton";
 import { Metadata } from "next";
 import ProductCard from "../ProductCard";
+import { BsCheckCircle } from "react-icons/bs";
 
 const thinkness = [0.5, 0.7, 0.8, 0.9, 1.0, 1.2, 1.5, 2.0, 2.5, 3.0, 4.0]
 const descriptionItems = [
@@ -34,6 +35,16 @@ export default function CatalogRollPage() {
                     <div className="mb-16">
                         <div>
                             <div>
+                                <ul className="mb-8">
+                                    <li className="flex items-center gap-2 mb-4">
+                                        <BsCheckCircle className="text-xl text-orange-400 w-4 min-w-4" />
+                                        Оплата переводом по реквизитам.
+                                    </li>
+                                    <li className="flex items-center gap-2 mb-4">
+                                        <BsCheckCircle className="text-xl text-orange-400 w-4 min-w-4" />
+                                        Скидки для постоянных клиентов.
+                                    </li>
+                                </ul>
                                 <div className="w-full">
                                     <ul className="lg:hidden flex flex-col gap-16">
                                         {thinkness.map(item => (

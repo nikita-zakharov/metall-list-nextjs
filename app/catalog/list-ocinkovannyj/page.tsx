@@ -55,11 +55,12 @@ export default function CatalogSheetPage() {
                                 </li>
                                 <li className="flex items-center gap-2 mb-4">
                                     <BsCheckCircle className="text-xl text-orange-400 w-4 min-w-4" />
-                                    Услуги резки с точностью обработки 0.1 мм. Скидки для крупных, постоянных клиентов.
+                                    Индивидуальная порубка длиной до 5000 мм
                                 </li>
                                 <li className="flex items-center gap-2 mb-4">
                                     <BsCheckCircle className="text-xl text-orange-400 w-4 min-w-4" />
-                                    Индивидуальная порубка длиной до 5000 мм</li>
+                                    Скидки для постоянных клиентов.
+                                </li>
                             </ul>
 
                             <Link href="#gallery" className="mb-8 inline-block">

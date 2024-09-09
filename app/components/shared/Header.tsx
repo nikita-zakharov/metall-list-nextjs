@@ -1,8 +1,8 @@
 'use client'
 import Link from "next/link";
 import { LinkUrl } from "../../types";
-import { BsClock, BsGeoAlt, BsEnvelope, BsTelephone, BsXLg, BsList, BsChevronRight } from "react-icons/bs";
-import { address, openingHours } from "@/app/constants";
+import { BsClock, BsGeoAlt, BsEnvelope, BsTelephone, BsXLg, BsList, BsChevronRight, BsWhatsapp } from "react-icons/bs";
+import { address, openingHours, whatsappLink } from "@/app/constants";
 import EmailLink from "./EmailLink";
 import PhoneLink from "./PhoneLink";
 import Button from "./Button";
@@ -53,6 +53,16 @@ const MobileMenu = () => {
                 </div>
                 <div>
                     <ul>
+                        <li className="flex items-center gap-2 p-4">
+                            <Link href={whatsappLink}
+                                target="_blank"
+                                className="flex items-center gap-2">
+                                <div className="rounded-full bg-green-400">
+                                    <BsWhatsapp className="text-white text-2xl" />
+                                </div>
+                                <span className="text-green-600">Написать в Whatsapp</span>
+                            </Link>
+                        </li>
                         <li className="flex items-center gap-2 p-4">
                             <span className="text-orange-400"><BsTelephone /></span>
                             <span className="font-bold text-lg">
@@ -111,6 +121,17 @@ export default function Header() {
                                 <span className="font-bold text-lg">
                                     <PhoneLink />
                                 </span>
+
+                            </li>
+                            <li>
+                                <Link href={whatsappLink}
+                                    target="_blank"
+                                    className="flex items-center gap-2">
+                                    <div className="rounded-full bg-green-400">
+                                        <BsWhatsapp className="text-white text-2xl" />
+                                    </div>
+                                    <span className="text-green-600 hover:text-green-800">Whatsapp</span>
+                                </Link>
                             </li>
                         </ul>
                     </div>
