@@ -32,23 +32,23 @@ export default function CatalogSheetPage() {
                         <div>
                             <ul className="mb-8">
                                 <li className="flex items-center gap-2 mb-4">
-                                    <BsCheckCircle className="text-xl text-orange-400" />
+                                    <BsCheckCircle className="text-xl text-orange-400 w-4 min-w-4" />
                                     <p>Всегда в наличии стандартный лист 1250x2500 мм, всех толщин.</p>
                                 </li>
                                 <li className="flex items-center gap-2 mb-4">
-                                    <BsCheckCircle className="text-xl text-orange-400" />
+                                    <BsCheckCircle className="text-xl text-orange-400 w-4 min-w-4" />
                                     Оплата переводом по реквизитам.
                                 </li>
                                 <li className="flex items-center gap-2 mb-4">
-                                    <BsCheckCircle className="text-xl text-orange-400" />
+                                    <BsCheckCircle className="text-xl text-orange-400 w-4 min-w-4" />
                                     Услуги резки с точностью обработки 0.1 мм. Скидки для крупных, постоянных клиентов.
                                 </li>
                                 <li className="flex items-center gap-2 mb-4">
-                                    <BsCheckCircle className="text-xl text-orange-400" />
+                                    <BsCheckCircle className="text-xl text-orange-400 w-4 min-w-4" />
                                     Индивидуальная порубка длинной до 4000 мм</li>
                             </ul>
 
-                            <Link href="#gallery" className="mb-8 block">
+                            <Link href="#gallery" className="mb-8 inline-block">
                                 <Button>
                                     <p>Фото продукции <BsCamera className="inline ml-2" /></p>
                                 </Button>
@@ -57,12 +57,11 @@ export default function CatalogSheetPage() {
                             <div className="w-full">
                                 <ul className="lg:hidden flex flex-col gap-16">
                                     {thinkness.map(item => (
-                                        <li>
+                                        <li key={item}>
                                             <ProductCard
                                                 title={`Лист оцинкованный ${item} мм`}
                                                 description={(<>
-                                                    <p>Ширина: от 0.950 мм до 1550 мм</p>
-                                                    <p>Длина: любая до 5000 мм</p>
+
                                                 </>)}
                                                 image={<Image src={listyOcinkLg} className="w-full mb-4 p-4" alt={`Лист оцинкованный ${item} мм`} />}
                                             />
@@ -70,6 +69,7 @@ export default function CatalogSheetPage() {
                                     ))}
                                 </ul>
                             </div>
+
                             <table className="hidden lg:w-full lg:table overflow-x-auto">
                                 <thead>
                                     <tr className="border-b bg-neutral-100">
