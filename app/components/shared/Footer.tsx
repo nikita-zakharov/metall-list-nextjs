@@ -10,7 +10,8 @@ export default function Footer() {
             <div className="grid lg:grid-cols-12 gap-6 text-neutral-300 leading-7">
                 <div className="col-span-5">
                     <p className="text-xl mb-3">Металл-лист</p>
-                    <p>Продажа оцинкованной стали со склада <br /> в Воронеже, производство ПАО «НЛМК» (г.Липецк)</p>
+                    <p className="mb-2">Продажа оцинкованной стали со склада <br /> в Воронеже, производство ПАО «НЛМК» (г.Липецк)</p>
+                    <iframe src="https://yandex.ru/sprav/widget/rating-badge/1381466419?type=rating" width="150" height="50"></iframe>
                 </div>
                 <div className="col-span-4">
                     <p className="text-neutral-400 text-xl mb-3">Каталог</p>
