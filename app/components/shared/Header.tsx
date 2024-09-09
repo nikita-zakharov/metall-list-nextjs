@@ -118,7 +118,7 @@ export default function Header() {
                             </li>
                             <li className="mr-8 flex items-center gap-2">
                                 <span className="text-orange-400"><BsTelephone /></span>
-                                <span className="font-bold text-lg">
+                                <span>
                                     <PhoneLink />
                                 </span>
 
@@ -128,9 +128,9 @@ export default function Header() {
                                     target="_blank"
                                     className="flex items-center gap-2">
                                     <div className="rounded-full bg-green-400">
-                                        <BsWhatsapp className="text-white text-2xl" />
+                                        <BsWhatsapp className="text-white text-xl" />
                                     </div>
-                                    <span className="text-green-600 hover:text-green-800">Whatsapp</span>
+                                    <span className="text-green-600 hover:text-green-800">Написать в Whatsapp</span>
                                 </Link>
                             </li>
                         </ul>
