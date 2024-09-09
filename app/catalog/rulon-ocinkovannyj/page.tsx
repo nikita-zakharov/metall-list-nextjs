@@ -79,7 +79,7 @@ export default function CatalogRollPage() {
                                                 <td>
                                                     <Image src={nlmkLogoPic} className="mx-auto" width="65" alt="Логотип компании НЛМК" />
                                                 </td>
-                                                <td>По запросу</td>
+                                                <td>По договоренности</td>
                                                 <td>
                                                     <BuyButton />
                                                 </td>

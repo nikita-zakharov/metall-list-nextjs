@@ -59,7 +59,7 @@ export default function CatalogSheetPage() {
                                 </li>
                                 <li className="flex items-center gap-2 mb-4">
                                     <BsCheckCircle className="text-xl text-orange-400 w-4 min-w-4" />
-                                    Индивидуальная порубка длинной до 4000 мм</li>
+                                    Индивидуальная порубка длиной до 5000 мм</li>
                             </ul>
 
                             <Link href="#gallery" className="mb-8 inline-block">
