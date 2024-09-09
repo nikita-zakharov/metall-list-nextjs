@@ -4,11 +4,12 @@
 
 html {
   font-family: 'Open Sans', sans-serif;
+  scroll-behavior: smooth;
 }
 
 @layer base {
   body {
-    @apply text-sm lg:text-base;
+    @apply text-sm lg:text-base text-neutral-800;
   }
 
   table th,

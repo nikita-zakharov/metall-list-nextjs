@@ -9,7 +9,7 @@ const CallbackModal = () => {
     return (
         <div className="fixed top-0 z-20">
             <div className="w-screen h-screen fixed top-0 left-0 bg-black opacity-80" onClick={hide}></div>
-            <div className="w-[420px] fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            <div className="lg:w-[440px] w-[90%] fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                 <div className="relative">
                     <div>
                         <button onClick={hide} className="absolute top-4 right-4"><BsXLg /></button>

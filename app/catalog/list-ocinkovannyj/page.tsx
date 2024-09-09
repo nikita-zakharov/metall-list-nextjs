@@ -6,11 +6,15 @@ import listyOcinkPic2 from '@/public/images/listy-ocinkovannyj-2.jpeg'
 import listyOcinkPic3 from '@/public/images/listy-ocinkovannyj-3.jpeg'
 import listyOcinkPic4 from '@/public/images/listy-ocinkovannyj-4.jpeg'
 import listyOcinkSmall from '@/public/images/list-ocink-small.png'
+import listyOcinkLg from '@/public/images/listy-pachka.png'
 import LightGalleryWrapper from "@/app/components/shared/LightGalleryWrapper";
 import Banner from "@/app/components/shared/Banner";
 import SectionContainer from "@/app/components/shared/SectionContainer";
 import BuyButton from "../BuyButton";
-import { BsCheckCircle } from "react-icons/bs";
+import { BsCamera, BsCheckCircle } from "react-icons/bs";
+import ProductCard from "../ProductCard";
+import Link from "next/link";
+import Button from "@/app/components/shared/Button";
 
 const thinkness = [0.5, 0.7, 0.8, 0.9, 1.0, 1.2, 1.5, 2.0, 2.5, 3.0]
 const gallery = [listyOcinkPic1, listyOcinkPic2, listyOcinkPic3, listyOcinkPic4]
@@ -27,12 +31,46 @@ export default function CatalogSheetPage() {
                     <div>
                         <div>
                             <ul className="mb-8">
-                                <li className="flex items-center gap-2">
+                                <li className="flex items-center gap-2 mb-4">
                                     <BsCheckCircle className="text-xl text-orange-400" />
                                     <p>Всегда в наличии стандартный лист 1250x2500 мм, всех толщин.</p>
                                 </li>
+                                <li className="flex items-center gap-2 mb-4">
+                                    <BsCheckCircle className="text-xl text-orange-400" />
+                                    Оплата переводом по реквизитам.
+                                </li>
+                                <li className="flex items-center gap-2 mb-4">
+                                    <BsCheckCircle className="text-xl text-orange-400" />
+                                    Услуги резки с точностью обработки 0.1 мм. Скидки для крупных, постоянных клиентов.
+                                </li>
+                                <li className="flex items-center gap-2 mb-4">
+                                    <BsCheckCircle className="text-xl text-orange-400" />
+                                    Индивидуальная порубка длинной до 4000 мм</li>
                             </ul>
-                            <table className="w-full block lg:table overflow-x-auto">
+
+                            <Link href="#gallery" className="mb-8 block">
+                                <Button>
+                                    <p>Фото продукции <BsCamera className="inline ml-2" /></p>
+                                </Button>
+                            </Link>
+
+                            <div className="w-full">
+                                <ul className="lg:hidden flex flex-col gap-16">
+                                    {thinkness.map(item => (
+                                        <li>
+                                            <ProductCard
+                                                title={`Лист оцинкованный ${item} мм`}
+                                                description={(<>
+                                                    <p>Ширина: от 0.950 мм до 1550 мм</p>
+                                                    <p>Длина: любая до 5000 мм</p>
+                                                </>)}
+                                                image={<Image src={listyOcinkLg} className="w-full mb-4 p-4" alt={`Лист оцинкованный ${item} мм`} />}
+                                            />
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                            <table className="hidden lg:w-full lg:table overflow-x-auto">
                                 <thead>
                                     <tr className="border-b bg-neutral-100">
                                         <th>Наименование</th>
@@ -69,7 +107,7 @@ export default function CatalogSheetPage() {
                                             <td>
                                                 <Image src={nlmkLogoPic} className="mx-auto" width="65" alt="Логотип компании НЛМК" />
                                             </td>
-                                            <td>По запросу</td>
+                                            <td>По договоренности</td>
                                             <td>
                                                 <BuyButton />
                                             </td>
@@ -80,7 +118,7 @@ export default function CatalogSheetPage() {
                         </div>
                     </div>
                 </div>
-                <div>
+                <div id="gallery">
                     <h2 className="font-bold text-2xl mb-8">Фото продукции</h2>
                     <nav>
                         <LightGalleryWrapper
