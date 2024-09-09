@@ -15,9 +15,23 @@ import { BsCamera, BsCheckCircle } from "react-icons/bs";
 import ProductCard from "../ProductCard";
 import Link from "next/link";
 import Button from "@/app/components/shared/Button";
+import { Metadata } from "next";
 
 const thinkness = [0.5, 0.7, 0.8, 0.9, 1.0, 1.2, 1.5, 2.0, 2.5, 3.0]
 const gallery = [listyOcinkPic1, listyOcinkPic2, listyOcinkPic3, listyOcinkPic4]
+
+const descriptionItems = [
+    { name: 'Ширина', value: 'от 0.950 мм до 1550 мм' },
+    { name: 'Длина', value: 'любая, до 5000 мм' },
+    { name: 'Марка стали', value: '02/220/350' },
+    { name: 'Цинк', value: 'от 100 до 600' },
+    { name: 'Производитель', value: <Image src={nlmkLogoPic} className="mx-auto inline" width="50" alt="Логотип компании НЛМК" /> },
+]
+
+export const metadata: Metadata = {
+    title: "Купить оцинкованный лист в Воронеже | Металл-лист",
+    description: "Продажа оцинкованного листв в Воронеже",
+};
 
 export default function CatalogSheetPage() {
     return (<div>
@@ -60,9 +74,7 @@ export default function CatalogSheetPage() {
                                         <li key={item}>
                                             <ProductCard
                                                 title={`Лист оцинкованный ${item} мм`}
-                                                description={(<>
-
-                                                </>)}
+                                                description={descriptionItems}
                                                 image={<Image src={listyOcinkLg} className="w-full mb-4 p-4" alt={`Лист оцинкованный ${item} мм`} />}
                                             />
                                         </li>

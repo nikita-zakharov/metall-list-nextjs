@@ -1,13 +1,26 @@
-'use client'
 import CatalogNavigation from "../CatalogNavigation";
 import nlmkLogoPic from '@/public/images/NLMK-logo.png'
 import lentaSmall from '@/public/images/lenta-shtrips-small.png'
+import lentaLarge from '@/public/images/lenta-shtrips-rulon.png'
 import Image from "next/image";
 import Banner from "@/app/components/shared/Banner";
 import SectionContainer from "@/app/components/shared/SectionContainer";
 import BuyButton from "../BuyButton";
+import { Metadata } from "next";
+import ProductCard from "../ProductCard";
 
 const thinkness = [0.5, 0.7, 0.8, 0.9, 1.0, 1.2, 1.5, 2.0, 2.5, 3.0]
+const descriptionItems = [
+    { name: 'Ширина', value: 'от 0.950 мм до 1550 мм' },
+    { name: 'Марка стали', value: '02/220/350' },
+    { name: 'Цинк', value: 'от 100 до 600' },
+    { name: 'Производитель', value: <Image src={nlmkLogoPic} className="mx-auto inline" width="50" alt="Логотип компании НЛМК" /> },
+]
+
+export const metadata: Metadata = {
+    title: "Купить штрипс (лента) оцинкованную в Воронеже | Металл-лист",
+    description: "Продажа оцинкованной ленты (штрипс) в Воронеже",
+};
 
 export default function CatalogTapePage() {
     return (<div>
@@ -20,7 +33,21 @@ export default function CatalogTapePage() {
                 <div className="mb-16">
                     <div>
                         <div>
-                            <table className="w-full block lg:table overflow-x-auto">
+                            <div className="w-full">
+                                <ul className="lg:hidden flex flex-col gap-16">
+                                    {thinkness.map(item => (
+                                        <li key={item}>
+                                            <ProductCard
+                                                title={`Рулон оцинкованный ${item} мм`}
+                                                description={descriptionItems}
+                                                image={<Image src={lentaLarge} className="w-full mb-4 p-4" alt={`Лента (штрипс) оцинкованная ${item} мм`} />}
+                                            />
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+
+                            <table className="hidden lg:w-full lg:table overflow-x-auto">
                                 <thead>
                                     <tr className="border-b bg-neutral-100">
                                         <th>Наименование</th>

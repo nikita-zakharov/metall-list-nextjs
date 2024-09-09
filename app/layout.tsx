@@ -8,7 +8,7 @@ import CallbackModalProvider from "./components/modals/CallbackModal/CallbackMod
 const font = Open_Sans({ subsets: ["cyrillic"] });
 
 export const metadata: Metadata = {
-  title: "Оцинкованная сталь в Воронеже | Металл-лист",
+  title: "Купить оцинкованную сталь в Воронеже | Металл-лист",
   description: "Продажа оцинкованной стали в Воронеже, в листах, ленте и рулонах",
 };
 
@@ -25,7 +25,6 @@ export default function RootLayout({
     <CallbackModalProvider>
       <html lang="en">
         <head>
-          <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         </head>
         <body className={font.className}>
           <Header />

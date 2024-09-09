@@ -83,7 +83,7 @@ const OurProducts = () => {
                                     <Image src={tapePic} className="opacity-60 w-[200px]" alt="Лента (штрипс) оцинкованный" />
                                 </div>
                             )}
-                            href={LinkUrl.CatalogRoll} />
+                            href={LinkUrl.CatalogTape} />
                     </li>
                 </ul>
             </div>
