@@ -4,12 +4,16 @@ import { Open_Sans } from "next/font/google";
 import Header from "./components/shared/Header";
 import Footer from "./components/shared/Footer";
 import CallbackModalProvider from "./components/modals/CallbackModal/CallbackModalProvider";
+import { emailAddress, phoneNumberFormatted } from "./constants";
 
 const font = Open_Sans({ subsets: ["cyrillic"] });
 
 export const metadata: Metadata = {
-  title: "Купить оцинкованную сталь в Воронеже | Металл-лист",
-  description: "Продажа оцинкованной стали в Воронеже, в листах, ленте и рулонах",
+  title: {
+    template: "%s | «Металл-лист»",
+    default: 'Оцинкованная сталь купить в Воронеже по выгодной цене, с доставкой | «Металл-лист»'
+  },
+  description: `Каталог оцинкованной стали, купить в Воронеже по выгодной цене. Доставка в день заказа. Продаем оптом и в розницу. Оставьте заявку на ${emailAddress} или позвоните нам по телефону ${phoneNumberFormatted} | «Металл-лист»`,
 };
 
 export const viewport: Viewport = {

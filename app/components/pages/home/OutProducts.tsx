@@ -6,6 +6,7 @@ import sheetPic from '@/public/images/listy-pachka.png'
 import rollPic from '@/public/images/rulon-ocink.png'
 import tapePic from '@/public/images/lenta-shtrips-rulon.png'
 import SectionContainer from "../../shared/SectionContainer"
+import Button from "../../shared/Button"
 
 interface ProductCardProps {
     name: string;
@@ -35,9 +36,9 @@ const ProductCard = ({ name, thickness, length, href, image }: ProductCardProps)
                 </div>
                 <div className="flex items-center gap-24">
                     <Link href={href}>
-                        <button className="bg-orange-400 text-white px-6 py-2 rounded-full">
+                        <Button>
                             Каталог
-                        </button>
+                        </Button>
                     </Link>
                 </div>
             </div>

@@ -1,9 +1,15 @@
+import { Metadata } from "next";
 import Banner from "../components/shared/Banner";
 import EmailLink from "../components/shared/EmailLink";
 import PhoneLink from "../components/shared/PhoneLink";
 import SectionContainer from "../components/shared/SectionContainer";
 import YandexMap from "../components/shared/YandexMap";
 import { openingHours } from "../constants";
+
+export const metadata: Metadata = {
+    title: "Контакты",
+};
+
 
 export default function ContactsPage() {
     return (<div>

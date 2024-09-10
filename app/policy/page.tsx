@@ -1,4 +1,10 @@
+import { Metadata } from "next";
 import SectionContainer from "../components/shared/SectionContainer";
+
+export const metadata: Metadata = {
+    title: "Политика в отношении обработки персональных данных",
+};
+
 
 export default function PolicyPage() {
     return (

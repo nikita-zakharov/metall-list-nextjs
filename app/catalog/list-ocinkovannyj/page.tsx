@@ -16,6 +16,7 @@ import ProductCard from "../ProductCard";
 import Link from "next/link";
 import Button from "@/app/components/shared/Button";
 import { Metadata } from "next";
+import { emailAddress, phoneNumberFormatted } from "@/app/constants";
 
 const thinkness = [0.5, 0.7, 0.8, 0.9, 1.0, 1.2, 1.5, 2.0, 2.5, 3.0]
 const gallery = [listyOcinkPic1, listyOcinkPic2, listyOcinkPic3, listyOcinkPic4]
@@ -29,8 +30,8 @@ const descriptionItems = [
 ]
 
 export const metadata: Metadata = {
-    title: "Купить оцинкованный лист в Воронеже | Металл-лист",
-    description: "Продажа оцинкованного листв в Воронеже",
+    title: "Лист оцинкованный купить в Воронеже по выгодной цене, с доставкой",
+    description: `Каталог листовой стали оцинкованной, купить в Воронеже по выгодной цене. Доставка в день заказа. Продаем оптом и в розницу. Оставьте заявку на ${emailAddress} или позвоните нам по телефону ${phoneNumberFormatted} | «Металл-лист»`,
 };
 
 export default function CatalogSheetPage() {

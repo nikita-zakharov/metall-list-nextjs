@@ -168,7 +168,7 @@ export default function Header() {
                                     </Link>
                                 </li>
                             </nav>
-                            <Button onClick={() => callbackModal.show()}>Запросить цены</Button>
+                            <Button onClick={() => callbackModal.show()}>Расчет стоимости</Button>
                         </div>
                     </div>
                 </div>

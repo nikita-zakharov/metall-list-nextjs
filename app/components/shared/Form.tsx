@@ -1,6 +1,7 @@
 'use client'
 import { SubmitHandler, useForm } from "react-hook-form"
 import Button from "./Button"
+import Link from "next/link";
 
 interface FormValues {
     name: string;
@@ -71,7 +72,9 @@ export default function Form({ onSuccess }: Props) {
                 <label className="block text-sm mb-1" htmlFor="message">Комментарий</label>
                 <textarea {...register('message')} className="border py-2 px-4 rounded-lg w-full" name="message" placeholder="Опишите детали заказа" />
             </div>
-            <p className="text-xs mb-4">Нажимая кнопку “Отправить” вы соглашаетесь с политикой обработки личных данных.</p>
+            <p className="text-xs mb-4">
+                Нажимая на кнопку “Отправить” вы соглашаетесь с <Link href="/policy" target="_blank" className="underline">политикой конфиденциальности</Link>.
+            </p>
             <Button
                 buttonProps={{ type: 'submit' }}
                 className="w-full">

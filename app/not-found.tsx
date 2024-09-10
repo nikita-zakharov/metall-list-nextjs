@@ -1,6 +1,11 @@
 import Link from "next/link";
 import SectionContainer from "./components/shared/SectionContainer";
 import Button from "./components/shared/Button";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Страница не найдена",
+};
 
 export default function Custom404() {
     return (

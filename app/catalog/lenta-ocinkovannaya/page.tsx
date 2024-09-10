@@ -9,6 +9,7 @@ import BuyButton from "../BuyButton";
 import { Metadata } from "next";
 import ProductCard from "../ProductCard";
 import { BsCheckCircle, BsWhatsapp } from "react-icons/bs";
+import { emailAddress, phoneNumberFormatted } from "@/app/constants";
 
 const thinkness = [0.5, 0.7, 0.8, 0.9, 1.0, 1.2, 1.5, 2.0, 2.5, 3.0]
 const descriptionItems = [
@@ -19,9 +20,10 @@ const descriptionItems = [
 ]
 
 export const metadata: Metadata = {
-    title: "Купить штрипс (лента) оцинкованную в Воронеже | Металл-лист",
-    description: "Продажа оцинкованной ленты (штрипс) в Воронеже",
+    title: "Лента оцинкованная купить в Воронеже по выгодной цене, с доставкой",
+    description: `Каталог ленты стальной оцинкованной, купить в Воронеже по выгодной цене. Доставка в день заказа. Продаем оптом и в розницу. Оставьте заявку на ${emailAddress} или позвоните нам по телефону ${phoneNumberFormatted} | «Металл-лист»`,
 };
+
 
 export default function CatalogTapePage() {
     return (<div>
