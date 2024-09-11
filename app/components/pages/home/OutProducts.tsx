@@ -81,7 +81,7 @@ const OurProducts = () => {
                             thickness="от 0.3 до 4 мм"
                             image={(
                                 <div className="absolute top-[85px] right-2">
-                                    <Image src={tapePic} className="opacity-60 w-[200px]" alt="Лента (штрипс) оцинкованный" />
+                                    <Image src={tapePic} className="opacity-60 w-[200px]" alt="Лента (штрипс) оцинкованная" />
                                 </div>
                             )}
                             href={LinkUrl.CatalogTape} />

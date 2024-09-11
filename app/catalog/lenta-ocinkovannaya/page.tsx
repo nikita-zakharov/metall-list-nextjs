@@ -51,7 +51,7 @@ export default function CatalogTapePage() {
                                     {thinkness.map(item => (
                                         <li key={item}>
                                             <ProductCard
-                                                title={`Рулон оцинкованный ${item} мм`}
+                                                title={`Лента оцинкованная ${item} мм`}
                                                 description={descriptionItems}
                                                 image={<Image src={lentaLarge} className="w-full mb-4 p-4" alt={`Лента (штрипс) оцинкованная ${item} мм`} />}
                                             />
