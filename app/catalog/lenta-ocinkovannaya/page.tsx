@@ -1,7 +1,7 @@
 import CatalogNavigation from "../CatalogNavigation";
-import nlmkLogoPic from '@/public/images/NLMK-logo.png'
-import lentaSmall from '@/public/images/lenta-shtrips-small.png'
-import lentaLarge from '@/public/images/lenta-shtrips-rulon.png'
+import nlmkLogoPic from '@/public/images/NLMK-logo.webp'
+import lentaSmall from '@/public/images/lenta-shtrips-small.webp'
+import lentaLarge from '@/public/images/lenta-shtrips-rulon.webp'
 import Image from "next/image";
 import Banner from "@/app/components/shared/Banner";
 import SectionContainer from "@/app/components/shared/SectionContainer";
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 
 export default function CatalogTapePage() {
     return (<div>
-        <Banner imageSrc="/images/banner-lenta.png" title="Лента (штрипс) оцинкованная" />
+        <Banner imageSrc="/images/banner-lenta.webp" title="Лента (штрипс) оцинкованная" />
         <SectionContainer>
             <div className="container">
                 <div className="mb-16">

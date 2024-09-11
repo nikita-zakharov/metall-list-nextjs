@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function PaymentAndDeliveryPage() {
     return (<div>
-        <Banner title="Оплата и доставка" imageSrc="/images/truck-banner.png" />
+        <Banner title="Оплата и доставка" imageSrc="/images/truck-banner.webp" />
         <SectionContainer>
             <div className="container">
                 <div className="mb-8">

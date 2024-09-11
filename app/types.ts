@@ -5,5 +5,6 @@ export enum LinkUrl {
     CatalogRoll = '/catalog/rulon-ocinkovannyj/',
     CatalogTape = '/catalog/lenta-ocinkovannaya/',
     PaymentAndDelivery = '/oplata-i-dostavka/',
-    Contacts = '/contacts/'
+    Contacts = '/contacts/',
+    Policy = '/policy'
 }

@@ -6,7 +6,7 @@ const HeroSection = () => {
     return (
         <div>
             <div className="relative" style={{
-                background: 'linear-gradient(0deg,rgba(32, 32, 32, 0.7),rgba(32, 32, 32, 0.9)), url("/images/hero.jpg")',
+                background: 'linear-gradient(0deg,rgba(32, 32, 32, 0.7),rgba(32, 32, 32, 0.9)), url("/images/hero.webp")',
                 backgroundPosition: 'center',
                 backgroundSize: 'cover'
             }}>

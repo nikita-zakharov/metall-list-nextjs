@@ -1,7 +1,7 @@
 import CatalogNavigation from "../CatalogNavigation"
-import nlmkLogoPic from '@/public/images/NLMK-logo.png'
-import rulonSmall from '@/public/images/rulon-small.png'
-import rulonLarge from '@/public/images/rulon-ocink.png'
+import nlmkLogoPic from '@/public/images/NLMK-logo.webp'
+import rulonSmall from '@/public/images/rulon-small.webp'
+import rulonLarge from '@/public/images/rulon-ocink.webp'
 import Image from "next/image";
 import Banner from "@/app/components/shared/Banner";
 import SectionContainer from "@/app/components/shared/SectionContainer";
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 export default function CatalogRollPage() {
     return (
         <div>
-            <Banner imageSrc="/images/banner-rulon.png" title="Рулон оцинкованный" />
+            <Banner imageSrc="/images/banner-rulon.webp" title="Рулон оцинкованный" />
             <SectionContainer>
                 <div className="container">
                     <div className="mb-16">

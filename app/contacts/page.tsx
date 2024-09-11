@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function ContactsPage() {
     return (<div>
-        <Banner title="Контакты" imageSrc="/images/banner-lenta.png" />
+        <Banner title="Контакты" imageSrc="/images/banner-lenta.webp" />
         <SectionContainer>
             <div className="container">
                 <div className="grid xl:grid-cols-12 gap-8">

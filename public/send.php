@@ -11,4 +11,5 @@ if (!$email || !$name) {
 }
 
 mail('nikzhrv@yandex.ru', 'Заявка с сайта металл-лист-воронеж.рф', $text);
+mail('ser.zah70@mail.ru', 'Заявка с сайта металл-лист-воронеж.рф', $text);
 ?>

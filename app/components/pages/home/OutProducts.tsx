@@ -2,9 +2,9 @@ import { LinkUrl } from "@/app/types"
 import Link from "next/link"
 import SectionHeading from "../../shared/SectionHeading"
 import Image, { StaticImageData } from "next/image"
-import sheetPic from '@/public/images/listy-pachka.png'
-import rollPic from '@/public/images/rulon-ocink.png'
-import tapePic from '@/public/images/lenta-shtrips-rulon.png'
+import sheetPic from '@/public/images/listy-pachka.webp'
+import rollPic from '@/public/images/rulon-ocink.webp'
+import tapePic from '@/public/images/lenta-shtrips-rulon.webp'
 import SectionContainer from "../../shared/SectionContainer"
 import Button from "../../shared/Button"
 

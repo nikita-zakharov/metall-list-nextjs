@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://металл-лист-воронеж.рф
+
+# Sitemaps
+Sitemap: https://металл-лист-воронеж.рф/sitemap.xml
