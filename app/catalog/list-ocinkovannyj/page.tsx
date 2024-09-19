@@ -22,8 +22,7 @@ const thinkness = [0.5, 0.7, 0.8, 0.9, 1.0, 1.2, 1.5, 2.0, 2.5, 3.0]
 const gallery = [listyOcinkPic1, listyOcinkPic2, listyOcinkPic3, listyOcinkPic4]
 
 const descriptionItems = [
-    { name: 'Ширина', value: 'от 0.950 мм до 1550 мм' },
-    { name: 'Длина', value: 'любая, до 5000 мм' },
+    { name: 'Размер', value: '1250x2500' },
     { name: 'Марка стали', value: '02/220/350' },
     { name: 'Цинк', value: 'от 100 до 600' },
     { name: 'Производитель', value: <Image src={nlmkLogoPic} className="mx-auto inline" width="50" alt="Логотип компании НЛМК" /> },
@@ -52,11 +51,11 @@ export default function CatalogSheetPage() {
                                 </li>
                                 <li className="flex items-center gap-2 mb-4">
                                     <BsCheckCircle className="text-xl text-orange-400 w-4 min-w-4" />
-                                    Оплата переводом по реквизитам.
+                                    Делаем любую длину до 5000 мм по вашей заявке
                                 </li>
                                 <li className="flex items-center gap-2 mb-4">
                                     <BsCheckCircle className="text-xl text-orange-400 w-4 min-w-4" />
-                                    Индивидуальная порубка длиной до 5000 мм
+                                    Оплата переводом по реквизитам.
                                 </li>
                                 <li className="flex items-center gap-2 mb-4">
                                     <BsCheckCircle className="text-xl text-orange-400 w-4 min-w-4" />
@@ -88,8 +87,7 @@ export default function CatalogSheetPage() {
                                 <thead>
                                     <tr className="border-b bg-neutral-100">
                                         <th>Наименование</th>
-                                        <th>Ширина</th>
-                                        <th>Длина</th>
+                                        <th>Размер</th>
                                         <th>Марка стали</th>
                                         <th>Цинк</th>
                                         <th>Производитель</th>
@@ -109,12 +107,7 @@ export default function CatalogSheetPage() {
                                                 </div>
                                             </td>
                                             <td>
-                                                <p>от 0.950 мм</p>
-                                                <p>до 1550 мм</p>
-                                            </td>
-                                            <td>
-                                                <p>Любая</p>
-                                                <p>до 5000 мм</p>
+                                                <p>1250x2500</p>
                                             </td>
                                             <td>02/220/350</td>
                                             <td>от 100 до 600</td>

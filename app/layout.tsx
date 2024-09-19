@@ -5,6 +5,8 @@ import Header from "./components/shared/Header";
 import Footer from "./components/shared/Footer";
 import CallbackModalProvider from "./components/modals/CallbackModal/CallbackModalProvider";
 import { emailAddress, phoneNumberFormatted } from "./constants";
+import YandexMetrika from "./components/shared/YandexMetrika";
+import { Suspense } from "react";
 
 const font = Open_Sans({ subsets: ["cyrillic"] });
 
@@ -28,9 +30,10 @@ export default function RootLayout({
   return (
     <CallbackModalProvider>
       <html lang="en">
-        <head>
-        </head>
         <body className={font.className}>
+          <Suspense>
+            <YandexMetrika />
+          </Suspense>
           <Header />
           <main className="min-h-[600px]">
             {children}

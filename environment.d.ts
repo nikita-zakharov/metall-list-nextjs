@@ -6,4 +6,7 @@ declare global {
             SITE_URL: string;
         }
     }
+    interface Window {
+        ym?: (id: number, event: string, location: string) => void
+    }
 }

@@ -5,3 +5,4 @@ export const address = 'г. Воронеж, ул. Базовая 4'
 export const openingHours = 'пн-пт: 09:00-18:00'
 export const nlmkSiteUrl = 'https://www.nlmk.com/ru/'
 export const whatsappLink = `https://wa.me/${phoneNumber}`
+export const yandexMetrikaId = 97411197

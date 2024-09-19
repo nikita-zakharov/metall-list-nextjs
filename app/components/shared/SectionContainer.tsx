@@ -6,7 +6,7 @@ interface Props {
 }
 
 export default function SectionContainer({ children, className }: Props) {
-    return (<section className={`py-12 lg:py-16 ${className}`}>
+    return (<section className={`py-12 lg:py-16 ${className || ''}`}>
         {children}
     </section>)
 }

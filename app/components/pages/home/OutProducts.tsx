@@ -1,7 +1,7 @@
 import { LinkUrl } from "@/app/types"
 import Link from "next/link"
 import SectionHeading from "../../shared/SectionHeading"
-import Image, { StaticImageData } from "next/image"
+import Image from "next/image"
 import sheetPic from '@/public/images/listy-pachka.webp'
 import rollPic from '@/public/images/rulon-ocink.webp'
 import tapePic from '@/public/images/lenta-shtrips-rulon.webp'
@@ -22,8 +22,10 @@ const ProductCard = ({ name, thickness, length, href, image }: ProductCardProps)
             <div className="flex flex-col justify-between h-full">
                 <div>
                     <div className="mb-4">
-                        <p className="font-bold text-2xl">Сталь оцинкованная</p>
-                        <p className="font-bold text-2xl text-orange-400">{name}</p>
+                        <h3 className="font-bold text-2xl">
+                            Сталь оцинкованная<br />
+                            <span className="text-orange-400">{name}</span>
+                        </h3>
                     </div>
                     <div className="text-sm mb-24">
                         <p>Толщина:</p>
